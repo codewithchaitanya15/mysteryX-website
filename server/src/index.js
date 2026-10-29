@@ -1,0 +1,20 @@
+import express from 'express';
+import cors from 'cors';
+import cookieParser from 'cookie-parser';
+import mongoose from 'mongoose';
+import rateLimit from 'express-rate-limit';
+import { env } from './config/env.js';
+import { sessionMiddleware } from './services/session.js';
+import { api } from './routes/api.js';
+
+const app=express();
+app.disable('x-powered-by');
+app.use(cors({origin:env.CLIENT_URL,credentials:true}));
+app.use(express.json({limit:'32kb'}));
+app.use(cookieParser());
+app.use(sessionMiddleware);
+app.use('/api/v1',rateLimit({windowMs:60_000,limit:60,standardHeaders:true,legacyHeaders:false}));
+app.use('/api/v1',api);
+app.use((err,req,res,_next)=>{const status=err.status??(err.name==='ZodError'?400:500);if(env.NODE_ENV!=='production')console.error(err);res.status(status).json({error:{message:status>=500?(err.status?err.message:'A server error occurred.'):err.message,details:err.name==='ZodError'?err.issues.map(x=>({field:x.path.join('.'),message:x.message})):undefined}});});
+await mongoose.connect(env.MONGODB_URI);
+app.listen(env.PORT,()=>console.log(`MysteryX API listening on ${env.PORT}`));

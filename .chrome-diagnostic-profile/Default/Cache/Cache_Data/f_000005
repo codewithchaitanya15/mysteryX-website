@@ -1,0 +1,2231 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/screens/App.jsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=38c00bf3"; const Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"]; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$(), _s2 = $RefreshSig$(), _s3 = $RefreshSig$(), _s4 = $RefreshSig$(), _s5 = $RefreshSig$();
+import __vite__cjsImport3_react from "/node_modules/.vite/deps/react.js?v=38c00bf3"; const useEffect = __vite__cjsImport3_react["useEffect"]; const useMemo = __vite__cjsImport3_react["useMemo"]; const useState = __vite__cjsImport3_react["useState"];
+import { Link, useLocation, useNavigate, useParams } from "/node_modules/.vite/deps/react-router-dom.js?v=38c00bf3";
+import { api } from "/src/api.js";
+const Glyph = ({ children }) => /* @__PURE__ */ jsxDEV("span", { className: "glyph", "aria-hidden": "true", children }, void 0, false, {
+  fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+  lineNumber: 24,
+  columnNumber: 33
+}, this);
+_c = Glyph;
+function Header() {
+  return /* @__PURE__ */ jsxDEV("header", { className: "topbar", children: [
+    /* @__PURE__ */ jsxDEV(Link, { to: "/", className: "brand", children: [
+      /* @__PURE__ */ jsxDEV("span", { className: "brand-mark", children: /* @__PURE__ */ jsxDEV(Glyph, { children: "◈" }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 25,
+        columnNumber: 114
+      }, this) }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 25,
+        columnNumber: 85
+      }, this),
+      /* @__PURE__ */ jsxDEV("span", { children: [
+        "AFTER",
+        /* @__PURE__ */ jsxDEV("span", { className: "accent", children: "HOURS" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 25,
+          columnNumber: 148
+        }, this),
+        /* @__PURE__ */ jsxDEV("small", { children: "THE MYSTERY ROOM" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 25,
+          columnNumber: 185
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 25,
+        columnNumber: 137
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 25,
+      columnNumber: 54
+    }, this),
+    /* @__PURE__ */ jsxDEV("nav", { children: [
+      /* @__PURE__ */ jsxDEV(Link, { to: "/cases", children: "Case files" }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 25,
+        columnNumber: 235
+      }, this),
+      /* @__PURE__ */ jsxDEV(Link, { className: "nav-cta", to: "/create", children: "＋ New investigation" }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 25,
+        columnNumber: 270
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 25,
+      columnNumber: 230
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+    lineNumber: 25,
+    columnNumber: 27
+  }, this);
+}
+_c2 = Header;
+function Shell({ children }) {
+  return /* @__PURE__ */ jsxDEV("div", { className: "app-shell", children: [
+    /* @__PURE__ */ jsxDEV(Header, {}, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 26,
+      columnNumber: 65
+    }, this),
+    children,
+    /* @__PURE__ */ jsxDEV("footer", { className: "footer", children: [
+      /* @__PURE__ */ jsxDEV("span", { children: "AFTERHOURS · A FICTIONAL INVESTIGATION STUDIO" }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 26,
+        columnNumber: 112
+      }, this),
+      /* @__PURE__ */ jsxDEV("span", { children: "Follow the evidence. Find the truth." }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 26,
+        columnNumber: 170
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 26,
+      columnNumber: 85
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+    lineNumber: 26,
+    columnNumber: 38
+  }, this);
+}
+_c3 = Shell;
+function Landing() {
+  return /* @__PURE__ */ jsxDEV(Shell, { children: /* @__PURE__ */ jsxDEV("main", { className: "landing", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "hero-copy", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "eyebrow", children: [
+        /* @__PURE__ */ jsxDEV("i", {}, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 27,
+          columnNumber: 113
+        }, this),
+        " AN INVESTIGATION BUILT AROUND YOUR STORY"
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 27,
+        columnNumber: 88
+      }, this),
+      /* @__PURE__ */ jsxDEV("h1", { children: [
+        "Every mystery",
+        /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 27,
+          columnNumber: 182
+        }, this),
+        "has a ",
+        /* @__PURE__ */ jsxDEV("em", { children: "truth." }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 27,
+          columnNumber: 194
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 27,
+        columnNumber: 165
+      }, this),
+      /* @__PURE__ */ jsxDEV("p", { children: "Bring us a strange little story. Leave with a case file full of suspects, clues, and one answer hiding in plain sight." }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 27,
+        columnNumber: 214
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "hero-actions", children: [
+        /* @__PURE__ */ jsxDEV(Link, { className: "button primary", to: "/create", children: [
+          "Create a mystery ",
+          /* @__PURE__ */ jsxDEV("span", { children: "↗" }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 27,
+            columnNumber: 432
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 27,
+          columnNumber: 369
+        }, this),
+        /* @__PURE__ */ jsxDEV(Link, { className: "button ghost", to: "/cases", children: [
+          "Explore your cases ",
+          /* @__PURE__ */ jsxDEV("span", { children: "→" }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 27,
+            columnNumber: 515
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 27,
+          columnNumber: 453
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 27,
+        columnNumber: 339
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "hero-note", children: [
+        /* @__PURE__ */ jsxDEV("span", { className: "avatar-stack", children: [
+          /* @__PURE__ */ jsxDEV("b", { children: "J" }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 27,
+            columnNumber: 600
+          }, this),
+          /* @__PURE__ */ jsxDEV("b", { children: "M" }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 27,
+            columnNumber: 608
+          }, this),
+          /* @__PURE__ */ jsxDEV("b", { children: "R" }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 27,
+            columnNumber: 616
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 27,
+          columnNumber: 569
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { children: [
+          "Made for curious minds",
+          /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 27,
+            columnNumber: 659
+          }, this),
+          /* @__PURE__ */ jsxDEV("strong", { children: "Every case is yours to solve" }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 27,
+            columnNumber: 665
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 27,
+          columnNumber: 631
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 27,
+        columnNumber: 542
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 27,
+      columnNumber: 61
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "case-art", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "art-wash" }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 27,
+        columnNumber: 755
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "file-card", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "file-top", children: [
+          /* @__PURE__ */ jsxDEV("span", { children: "CASE FILE · 0084" }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 27,
+            columnNumber: 836
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { className: "redacted-label", children: "CLASSIFIED" }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 27,
+            columnNumber: 865
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 27,
+          columnNumber: 810
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "file-photo", children: [
+          /* @__PURE__ */ jsxDEV("div", { className: "moon" }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 27,
+            columnNumber: 949
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "building", children: [
+            /* @__PURE__ */ jsxDEV("i", {}, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 27,
+              columnNumber: 999
+            }, this),
+            /* @__PURE__ */ jsxDEV("i", {}, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 27,
+              columnNumber: 1004
+            }, this),
+            /* @__PURE__ */ jsxDEV("i", {}, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 27,
+              columnNumber: 1009
+            }, this),
+            /* @__PURE__ */ jsxDEV("i", {}, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 27,
+              columnNumber: 1014
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 27,
+            columnNumber: 973
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { className: "photo-stamp", children: "NORTH WING · 23:41" }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 27,
+            columnNumber: 1025
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { className: "target-ring" }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 27,
+            columnNumber: 1080
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 27,
+          columnNumber: 921
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "file-details", children: [
+          /* @__PURE__ */ jsxDEV("span", { className: "tiny-label", children: "THE MARROW HOTEL" }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 27,
+            columnNumber: 1148
+          }, this),
+          /* @__PURE__ */ jsxDEV("h3", { children: [
+            "The room that",
+            /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 27,
+              columnNumber: 1217
+            }, this),
+            "was never locked"
+          ] }, void 0, true, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 27,
+            columnNumber: 1200
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "file-meta", children: [
+            /* @__PURE__ */ jsxDEV("span", { children: "6 PIECES OF EVIDENCE" }, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 27,
+              columnNumber: 1271
+            }, this),
+            /* @__PURE__ */ jsxDEV("span", { children: "◉ UNSOLVED" }, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 27,
+              columnNumber: 1304
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 27,
+            columnNumber: 1244
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 27,
+          columnNumber: 1118
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "file-tag", children: [
+          "A CASE TO CRACK ",
+          /* @__PURE__ */ jsxDEV("b", { children: "↗" }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 27,
+            columnNumber: 1381
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 27,
+          columnNumber: 1339
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 27,
+        columnNumber: 783
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "floating-note", children: [
+        /* @__PURE__ */ jsxDEV("span", { children: "FIELD NOTE 04" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 27,
+          columnNumber: 1432
+        }, this),
+        /* @__PURE__ */ jsxDEV("p", { children: [
+          "“The clock stopped",
+          /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 27,
+            columnNumber: 1479
+          }, this),
+          "at 11:17. It was still",
+          /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 27,
+            columnNumber: 1507
+          }, this),
+          "running at midnight.”"
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 27,
+          columnNumber: 1458
+        }, this),
+        /* @__PURE__ */ jsxDEV("small", { children: "— M. VALE, NIGHT CLERK" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 27,
+          columnNumber: 1538
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 27,
+        columnNumber: 1401
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "orbit orbit-one" }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 27,
+        columnNumber: 1581
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "orbit orbit-two" }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 27,
+        columnNumber: 1616
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 27,
+      columnNumber: 729
+    }, this),
+    /* @__PURE__ */ jsxDEV("section", { className: "feature-strip", children: [
+      /* @__PURE__ */ jsxDEV("div", { children: [
+        /* @__PURE__ */ jsxDEV("span", { children: "01 / BUILD" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 27,
+          columnNumber: 1697
+        }, this),
+        /* @__PURE__ */ jsxDEV("h3", { children: "Your story, a case." }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 27,
+          columnNumber: 1720
+        }, this),
+        /* @__PURE__ */ jsxDEV("p", { children: "Set the scene. AI creates a complete, one-of-a-kind mystery." }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 27,
+          columnNumber: 1748
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 27,
+        columnNumber: 1692
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { children: [
+        /* @__PURE__ */ jsxDEV("span", { children: "02 / INVESTIGATE" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 27,
+          columnNumber: 1826
+        }, this),
+        /* @__PURE__ */ jsxDEV("h3", { children: "Every detail matters." }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 27,
+          columnNumber: 1855
+        }, this),
+        /* @__PURE__ */ jsxDEV("p", { children: "Read statements, sift records, and connect the timeline." }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 27,
+          columnNumber: 1885
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 27,
+        columnNumber: 1821
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { children: [
+        /* @__PURE__ */ jsxDEV("span", { children: "03 / SOLVE" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 27,
+          columnNumber: 1959
+        }, this),
+        /* @__PURE__ */ jsxDEV("h3", { children: "Make your call." }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 27,
+          columnNumber: 1982
+        }, this),
+        /* @__PURE__ */ jsxDEV("p", { children: "One accusation. A hidden truth. The evidence speaks." }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 27,
+          columnNumber: 2006
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 27,
+        columnNumber: 1954
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 27,
+      columnNumber: 1657
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+    lineNumber: 27,
+    columnNumber: 35
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+    lineNumber: 27,
+    columnNumber: 28
+  }, this);
+}
+_c4 = Landing;
+function Create() {
+  _s();
+  const nav = useNavigate();
+  const [form, setForm] = useState({ scenario: "", difficulty: "Medium", mysteryType: "Any", evidenceCount: 8 });
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState("");
+  const count = form.scenario.length;
+  async function submit(e) {
+    e.preventDefault();
+    if (count < 30 || count > 2e3) return;
+    setBusy(true);
+    setError("");
+    try {
+      const d = await api("/mysteries", { method: "POST", body: JSON.stringify(form) });
+      nav(`/case/${d.case.id}`);
+    } catch (e2) {
+      setError(e2.message);
+      setBusy(false);
+    }
+  }
+  return /* @__PURE__ */ jsxDEV(Shell, { children: /* @__PURE__ */ jsxDEV("main", { className: "form-page", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "form-intro", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "eyebrow", children: [
+        /* @__PURE__ */ jsxDEV("i", {}, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 28,
+          columnNumber: 645
+        }, this),
+        " CASE CREATION / 01"
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 28,
+        columnNumber: 620
+      }, this),
+      /* @__PURE__ */ jsxDEV("h1", { children: [
+        "Start with a",
+        /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 28,
+          columnNumber: 691
+        }, this),
+        /* @__PURE__ */ jsxDEV("em", { children: "what if." }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 28,
+          columnNumber: 697
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 28,
+        columnNumber: 675
+      }, this),
+      /* @__PURE__ */ jsxDEV("p", { children: "Give us the seed of a story. We'll build the suspects, the evidence, and the truth around it." }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 28,
+        columnNumber: 719
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "promise", children: [
+        /* @__PURE__ */ jsxDEV(Glyph, { children: "✳" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 28,
+          columnNumber: 844
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { children: [
+          /* @__PURE__ */ jsxDEV("b", { children: "Every case is solvable." }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 28,
+            columnNumber: 866
+          }, this),
+          /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 28,
+            columnNumber: 896
+          }, this),
+          "The answer is fixed before the investigation begins."
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 28,
+          columnNumber: 860
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 28,
+        columnNumber: 819
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 28,
+      columnNumber: 592
+    }, this),
+    /* @__PURE__ */ jsxDEV("form", { className: "create-panel", onSubmit: submit, children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "panel-head", children: [
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("span", { className: "tiny-label", children: "YOUR CASE BEGINS HERE" }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 28,
+            columnNumber: 1055
+          }, this),
+          /* @__PURE__ */ jsxDEV("h2", { children: "Set the scene" }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 28,
+            columnNumber: 1112
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 28,
+          columnNumber: 1050
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { className: "step-indicator", children: [
+          "01 ",
+          /* @__PURE__ */ jsxDEV("i", {}, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 28,
+            columnNumber: 1176
+          }, this),
+          " 02"
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 28,
+          columnNumber: 1140
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 28,
+        columnNumber: 1022
+      }, this),
+      /* @__PURE__ */ jsxDEV("label", { htmlFor: "scenario", children: [
+        "THE SCENARIO ",
+        /* @__PURE__ */ jsxDEV("span", { children: "Required" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 28,
+          columnNumber: 1236
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 28,
+        columnNumber: 1197
+      }, this),
+      /* @__PURE__ */ jsxDEV("textarea", { id: "scenario", value: form.scenario, maxLength: 2e3, onChange: (e) => setForm({ ...form, scenario: e.target.value }), placeholder: "A locked room. A missing heirloom. Three people with a reason to lie…", required: true, minLength: 30 }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 28,
+        columnNumber: 1265
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "counter", children: [
+        count.toLocaleString(),
+        " / 2,000 characters ",
+        /* @__PURE__ */ jsxDEV("span", { children: count < 30 ? `${30 - count} more to go` : count > 1950 ? "Almost at the limit" : "" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 28,
+          columnNumber: 1572
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 28,
+        columnNumber: 1503
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "field-row", children: [
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("label", { htmlFor: "difficulty", children: "DIFFICULTY" }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 28,
+            columnNumber: 1708
+          }, this),
+          /* @__PURE__ */ jsxDEV("select", { id: "difficulty", value: form.difficulty, onChange: (e) => setForm({ ...form, difficulty: e.target.value }), children: [
+            /* @__PURE__ */ jsxDEV("option", { children: "Easy" }, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 28,
+              columnNumber: 1869
+            }, this),
+            /* @__PURE__ */ jsxDEV("option", { children: "Medium" }, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 28,
+              columnNumber: 1890
+            }, this),
+            /* @__PURE__ */ jsxDEV("option", { children: "Hard" }, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 28,
+              columnNumber: 1913
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 28,
+            columnNumber: 1754
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 28,
+          columnNumber: 1703
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("label", { htmlFor: "type", children: "CASE TYPE" }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 28,
+            columnNumber: 1954
+          }, this),
+          /* @__PURE__ */ jsxDEV("select", { id: "type", value: form.mysteryType, onChange: (e) => setForm({ ...form, mysteryType: e.target.value }), children: ["Any", "Theft", "Murder", "Disappearance", "Cybercrime", "General Incident"].map((x) => /* @__PURE__ */ jsxDEV("option", { children: x }, x, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 28,
+            columnNumber: 2194
+          }, this)) }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 28,
+            columnNumber: 1993
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 28,
+          columnNumber: 1949
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("label", { htmlFor: "evidence", children: "EVIDENCE" }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 28,
+            columnNumber: 2244
+          }, this),
+          /* @__PURE__ */ jsxDEV("select", { id: "evidence", value: form.evidenceCount, onChange: (e) => setForm({ ...form, evidenceCount: Number(e.target.value) }), children: Array.from({ length: 7 }, (_, i) => i + 6).map((x) => /* @__PURE__ */ jsxDEV("option", { value: x, children: [
+            x,
+            " items"
+          ] }, x, true, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 28,
+            columnNumber: 2468
+          }, this)) }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 28,
+            columnNumber: 2286
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 28,
+          columnNumber: 2239
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 28,
+        columnNumber: 1676
+      }, this),
+      error && /* @__PURE__ */ jsxDEV("div", { className: "error-box", children: [
+        /* @__PURE__ */ jsxDEV(Glyph, { children: "!" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 28,
+          columnNumber: 2572
+        }, this),
+        error
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 28,
+        columnNumber: 2545
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { className: "button primary wide", disabled: busy || count < 30 || count > 2e3, children: busy ? /* @__PURE__ */ jsxDEV(Fragment, { children: [
+        /* @__PURE__ */ jsxDEV("span", { className: "spinner" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 28,
+          columnNumber: 2698
+        }, this),
+        " Building your case…"
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 28,
+        columnNumber: 2696
+      }, this) : /* @__PURE__ */ jsxDEV(Fragment, { children: [
+        "Generate my case ",
+        /* @__PURE__ */ jsxDEV("span", { children: "↗" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 28,
+          columnNumber: 2771
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 28,
+        columnNumber: 2752
+      }, this) }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 28,
+        columnNumber: 2602
+      }, this),
+      /* @__PURE__ */ jsxDEV("p", { className: "privacy-note", children: [
+        /* @__PURE__ */ jsxDEV(Glyph, { children: "⌑" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 28,
+          columnNumber: 2826
+        }, this),
+        " Your case is private to this browser session."
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 28,
+        columnNumber: 2798
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 28,
+      columnNumber: 973
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+    lineNumber: 28,
+    columnNumber: 564
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+    lineNumber: 28,
+    columnNumber: 557
+  }, this);
+}
+_s(Create, "BYtS/lwKTR9DQLKScOw7s5nS2hU=", false, function() {
+  return [useNavigate];
+});
+_c5 = Create;
+function Cases() {
+  _s2();
+  const [cases, setCases] = useState([]), [error, setError] = useState("");
+  useEffect(() => {
+    api("/mysteries").then(setCases).catch((e) => setError(e.message));
+  }, []);
+  return /* @__PURE__ */ jsxDEV(Shell, { children: /* @__PURE__ */ jsxDEV("main", { className: "cases-page", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "eyebrow", children: [
+      /* @__PURE__ */ jsxDEV("i", {}, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 29,
+        columnNumber: 256
+      }, this),
+      " YOUR PRIVATE ARCHIVE"
+    ] }, void 0, true, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 29,
+      columnNumber: 231
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "cases-head", children: [
+      /* @__PURE__ */ jsxDEV("div", { children: [
+        /* @__PURE__ */ jsxDEV("h1", { children: [
+          "Case ",
+          /* @__PURE__ */ jsxDEV("em", { children: "files." }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 29,
+            columnNumber: 330
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 29,
+          columnNumber: 321
+        }, this),
+        /* @__PURE__ */ jsxDEV("p", { children: "Every story leaves a trail." }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 29,
+          columnNumber: 350
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 29,
+        columnNumber: 316
+      }, this),
+      /* @__PURE__ */ jsxDEV(Link, { to: "/create", className: "button primary", children: "＋ New case" }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 29,
+        columnNumber: 390
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 29,
+      columnNumber: 288
+    }, this),
+    error && /* @__PURE__ */ jsxDEV("div", { className: "error-box", children: error }, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 29,
+      columnNumber: 469
+    }, this),
+    !error && !cases.length ? /* @__PURE__ */ jsxDEV("div", { className: "empty-state", children: [
+      /* @__PURE__ */ jsxDEV("span", { className: "empty-icon", children: "⌕" }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 29,
+        columnNumber: 566
+      }, this),
+      /* @__PURE__ */ jsxDEV("h2", { children: "No open files. Yet." }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 29,
+        columnNumber: 603
+      }, this),
+      /* @__PURE__ */ jsxDEV("p", { children: "Your next mystery is one story away." }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 29,
+        columnNumber: 631
+      }, this),
+      /* @__PURE__ */ jsxDEV(Link, { to: "/create", className: "button primary", children: [
+        "Create your first case ",
+        /* @__PURE__ */ jsxDEV("span", { children: "↗" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 29,
+          columnNumber: 743
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 29,
+        columnNumber: 674
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 29,
+      columnNumber: 537
+    }, this) : /* @__PURE__ */ jsxDEV("div", { className: "case-grid", children: cases.map((c) => /* @__PURE__ */ jsxDEV(Link, { className: "history-card", to: `/case/${c.id}`, children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "history-art", children: [
+        /* @__PURE__ */ jsxDEV("span", { children: [
+          "CASE FILE · ",
+          String(c.id).slice(-5).toUpperCase()
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 29,
+          columnNumber: 910
+        }, this),
+        /* @__PURE__ */ jsxDEV("b", { children: c.difficulty }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 29,
+          columnNumber: 973
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "history-sigil", children: "◈" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 29,
+          columnNumber: 994
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 29,
+        columnNumber: 881
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "history-info", children: [
+        /* @__PURE__ */ jsxDEV("span", { className: "tiny-label", children: [
+          c.mysteryType,
+          " · ",
+          new Date(c.createdAt).toLocaleDateString()
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 29,
+          columnNumber: 1068
+        }, this),
+        /* @__PURE__ */ jsxDEV("h3", { children: c.title }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 29,
+          columnNumber: 1166
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "progress-line", children: /* @__PURE__ */ jsxDEV("i", { style: { width: `${Math.min(100, c.reviewedCount / c.evidenceCount * 100)}%` } }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 29,
+          columnNumber: 1215
+        }, this) }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 29,
+          columnNumber: 1184
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "history-foot", children: [
+          /* @__PURE__ */ jsxDEV("span", { children: [
+            c.reviewedCount,
+            "/",
+            c.evidenceCount,
+            " clues reviewed"
+          ] }, void 0, true, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 29,
+            columnNumber: 1336
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { children: [
+            c.status.toUpperCase(),
+            " ↗"
+          ] }, void 0, true, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 29,
+            columnNumber: 1399
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 29,
+          columnNumber: 1306
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 29,
+        columnNumber: 1038
+      }, this)
+    ] }, c.id, true, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 29,
+      columnNumber: 818
+    }, this)) }, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 29,
+      columnNumber: 773
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+    lineNumber: 29,
+    columnNumber: 202
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+    lineNumber: 29,
+    columnNumber: 195
+  }, this);
+}
+_s2(Cases, "2CRbQrm50MU/Jq5Rd7HlurBTwYc=");
+_c6 = Cases;
+function CaseRoom() {
+  _s3();
+  const { id } = useParams();
+  const nav = useNavigate();
+  const [data, setData] = useState(null), [inv, setInv] = useState(null), [selected, setSelected] = useState(null), [detail, setDetail] = useState(null), [filter, setFilter] = useState("All"), [search, setSearch] = useState(""), [error, setError] = useState(""), [saving, setSaving] = useState(false), [tab, setTab] = useState("Evidence"), [accuse, setAccuse] = useState(false);
+  useEffect(() => {
+    api(`/mysteries/${id}`).then((d) => {
+      setData(d.case);
+      setInv(d.investigation);
+      if (d.investigation?.accusation?.submittedAt) nav(`/case/${id}/results`, { replace: true });
+    }).catch((e) => setError(e.message));
+  }, [id]);
+  const cats = ["All", "conversation", "photograph", "cctv", "witness", "record"];
+  const shown = useMemo(() => data?.evidence.filter((e) => (filter === "All" || e.category === filter) && (e.title + e.description).toLowerCase().includes(search.toLowerCase())) || [], [data, filter, search]);
+  async function openEvidence(e) {
+    setSelected(e);
+    try {
+      const d = await api(`/mysteries/${id}/evidence/${e.id}`);
+      setDetail(d);
+      const i = await api(`/mysteries/${id}/investigation/reviewed`, { method: "PATCH", body: JSON.stringify({ evidenceId: e.id }) });
+      setInv(i);
+    } catch (e2) {
+      setError(e2.message);
+    }
+  }
+  async function saveNotes(value) {
+    setSaving(true);
+    try {
+      setInv(await api(`/mysteries/${id}/investigation/notes`, { method: "PATCH", body: JSON.stringify({ notes: value }) }));
+    } catch (e) {
+      setError(e.message);
+    } finally {
+      setSaving(false);
+    }
+  }
+  if (error && !data) return /* @__PURE__ */ jsxDEV(Shell, { children: /* @__PURE__ */ jsxDEV("main", { className: "error-page", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "error-box", children: error }, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 30,
+      columnNumber: 1561
+    }, this),
+    /* @__PURE__ */ jsxDEV(Link, { to: "/cases", className: "button ghost", children: "← Back to files" }, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 30,
+      columnNumber: 1601
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+    lineNumber: 30,
+    columnNumber: 1532
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+    lineNumber: 30,
+    columnNumber: 1525
+  }, this);
+  if (!data) return /* @__PURE__ */ jsxDEV(Shell, { children: /* @__PURE__ */ jsxDEV("main", { className: "loading-page", children: [
+    /* @__PURE__ */ jsxDEV("span", { className: "spinner" }, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 30,
+      columnNumber: 1738
+    }, this),
+    " Opening case file…"
+  ] }, void 0, true, {
+    fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+    lineNumber: 30,
+    columnNumber: 1707
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+    lineNumber: 30,
+    columnNumber: 1700
+  }, this);
+  return /* @__PURE__ */ jsxDEV(Shell, { children: [
+    /* @__PURE__ */ jsxDEV("main", { className: "room-page", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "room-heading", children: [
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("div", { className: "eyebrow", children: [
+            /* @__PURE__ */ jsxDEV("i", {}, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 1903
+            }, this),
+            " ACTIVE INVESTIGATION ",
+            /* @__PURE__ */ jsxDEV("span", { className: "case-number", children: [
+              "/ ",
+              String(data.id).slice(-6).toUpperCase()
+            ] }, void 0, true, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 1930
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 1878
+          }, this),
+          /* @__PURE__ */ jsxDEV("h1", { children: data.title }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 2016
+          }, this),
+          /* @__PURE__ */ jsxDEV("p", { children: [
+            data.location,
+            " ",
+            /* @__PURE__ */ jsxDEV("span", { children: "·" }, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 2056
+            }, this),
+            " ",
+            data.incidentDate,
+            " ",
+            /* @__PURE__ */ jsxDEV("span", { children: "·" }, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 2091
+            }, this),
+            " ",
+            data.difficulty
+          ] }, void 0, true, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 2037
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 30,
+          columnNumber: 1873
+        }, this),
+        /* @__PURE__ */ jsxDEV("button", { className: "button outline", onClick: () => setAccuse(true), children: [
+          "Make an accusation ",
+          /* @__PURE__ */ jsxDEV("span", { children: "↗" }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 2219
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 30,
+          columnNumber: 2133
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 30,
+        columnNumber: 1843
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "case-summary", children: [
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("span", { className: "tiny-label", children: "THE BRIEF" }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 2283
+          }, this),
+          /* @__PURE__ */ jsxDEV("p", { children: data.summary }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 2328
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 30,
+          columnNumber: 2278
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "brief-stat", children: [
+          /* @__PURE__ */ jsxDEV("b", { children: data.suspects.length }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 2383
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { children: [
+            "PERSONS OF",
+            /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 2428
+            }, this),
+            "INTEREST"
+          ] }, void 0, true, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 2412
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 30,
+          columnNumber: 2355
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "brief-stat", children: [
+          /* @__PURE__ */ jsxDEV("b", { children: data.evidence.length }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 2483
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { children: [
+            "PIECES OF",
+            /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 2527
+            }, this),
+            "EVIDENCE"
+          ] }, void 0, true, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 2512
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 30,
+          columnNumber: 2455
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 30,
+        columnNumber: 2248
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "mobile-tabs", children: ["Evidence", "People", "Timeline", "Notebook"].map((x) => /* @__PURE__ */ jsxDEV("button", { className: tab === x ? "active" : "", onClick: () => setTab(x), children: x }, x, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 30,
+        columnNumber: 2648
+      }, this)) }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 30,
+        columnNumber: 2560
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "room-grid", children: [
+        /* @__PURE__ */ jsxDEV("aside", { className: `room-side ${tab === "People" ? "mobile-show" : ""}`, children: [
+          /* @__PURE__ */ jsxDEV("div", { className: "side-head", children: [
+            /* @__PURE__ */ jsxDEV("span", { className: "tiny-label", children: "PERSONS OF INTEREST" }, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 2874
+            }, this),
+            /* @__PURE__ */ jsxDEV("span", { children: data.suspects.length }, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 2929
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 2847
+          }, this),
+          data.suspects.map((s, i) => /* @__PURE__ */ jsxDEV("article", { className: "suspect-row", children: [
+            /* @__PURE__ */ jsxDEV("div", { className: `suspect-avatar avatar-${i % 5}`, children: s.name.split(" ").map((x) => x[0]).join("").slice(0, 2) }, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 3043
+            }, this),
+            /* @__PURE__ */ jsxDEV("div", { children: [
+              /* @__PURE__ */ jsxDEV("b", { children: s.name }, void 0, false, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 3161
+              }, this),
+              /* @__PURE__ */ jsxDEV("span", { children: s.role }, void 0, false, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 3176
+              }, this)
+            ] }, void 0, true, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 3156
+            }, this),
+            /* @__PURE__ */ jsxDEV("span", { className: "suspect-arrow", children: "↗" }, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 3203
+            }, this),
+            /* @__PURE__ */ jsxDEV("details", { className: "suspect-detail", children: [
+              /* @__PURE__ */ jsxDEV("summary", { children: "View profile" }, void 0, false, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 3279
+              }, this),
+              /* @__PURE__ */ jsxDEV("p", { children: s.bio }, void 0, false, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 3310
+              }, this),
+              /* @__PURE__ */ jsxDEV("small", { children: "CLAIMED ALIBI" }, void 0, false, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 3324
+              }, this),
+              /* @__PURE__ */ jsxDEV("p", { children: s.alibi }, void 0, false, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 3352
+              }, this),
+              /* @__PURE__ */ jsxDEV("small", { children: "STATEMENT" }, void 0, false, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 3368
+              }, this),
+              /* @__PURE__ */ jsxDEV("p", { children: s.statement }, void 0, false, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 3392
+              }, this)
+            ] }, void 0, true, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 3243
+            }, this)
+          ] }, s.id, true, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 2999
+          }, this)),
+          /* @__PURE__ */ jsxDEV("div", { className: "timeline-block", children: [
+            /* @__PURE__ */ jsxDEV("div", { className: "side-head", children: [
+              /* @__PURE__ */ jsxDEV("span", { className: "tiny-label", children: "CASE TIMELINE" }, void 0, false, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 3493
+              }, this),
+              /* @__PURE__ */ jsxDEV("span", { children: "↗" }, void 0, false, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 3542
+              }, this)
+            ] }, void 0, true, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 3466
+            }, this),
+            data.timeline.map((e, i) => /* @__PURE__ */ jsxDEV("button", { className: "timeline-event", onClick: () => {
+              const target = data.evidence.find((x) => x.id === e.evidenceId);
+              if (target) {
+                setTab("Evidence");
+                openEvidence(target);
+              }
+            }, children: [
+              /* @__PURE__ */ jsxDEV("span", { className: "timeline-dot" }, void 0, false, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 3790
+              }, this),
+              /* @__PURE__ */ jsxDEV("small", { children: e.timestamp }, void 0, false, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 3823
+              }, this),
+              /* @__PURE__ */ jsxDEV("b", { children: e.description }, void 0, false, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 3851
+              }, this),
+              /* @__PURE__ */ jsxDEV("em", { children: e.certainty }, void 0, false, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 3873
+              }, this)
+            ] }, `${e.timestamp}${i}`, true, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 3591
+            }, this))
+          ] }, void 0, true, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 3434
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 30,
+          columnNumber: 2775
+        }, this),
+        /* @__PURE__ */ jsxDEV("section", { className: `evidence-main ${tab === "Evidence" ? "mobile-show" : ""}`, children: [
+          /* @__PURE__ */ jsxDEV("div", { className: "evidence-title", children: [
+            /* @__PURE__ */ jsxDEV("div", { children: [
+              /* @__PURE__ */ jsxDEV("span", { className: "tiny-label", children: "THE EVIDENCE ROOM" }, void 0, false, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 4037
+              }, this),
+              /* @__PURE__ */ jsxDEV("h2", { children: [
+                "Collected evidence ",
+                /* @__PURE__ */ jsxDEV("span", { children: shown.length.toString().padStart(2, "0") }, void 0, false, {
+                  fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                  lineNumber: 30,
+                  columnNumber: 4113
+                }, this)
+              ] }, void 0, true, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 4090
+              }, this)
+            ] }, void 0, true, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 4032
+            }, this),
+            /* @__PURE__ */ jsxDEV("div", { className: "search-box", children: [
+              /* @__PURE__ */ jsxDEV(Glyph, { children: "⌕" }, void 0, false, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 4207
+              }, this),
+              /* @__PURE__ */ jsxDEV("input", { "aria-label": "Search evidence", placeholder: "Search the file…", value: search, onChange: (e) => setSearch(e.target.value) }, void 0, false, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 4223
+              }, this)
+            ] }, void 0, true, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 4179
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 4e3
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "filters", children: cats.map((c) => /* @__PURE__ */ jsxDEV("button", { onClick: () => setFilter(c), className: filter === c ? "active" : "", children: c === "All" ? "All evidence" : c }, c, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 4405
+          }, this)) }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 4363
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "evidence-list", children: shown.map((e, i) => /* @__PURE__ */ jsxDEV("button", { className: `evidence-card ${selected?.id === e.id ? "chosen" : ""}`, onClick: () => openEvidence(e), children: [
+            /* @__PURE__ */ jsxDEV("div", { className: `evidence-cover cover-${e.category}`, children: [
+              /* @__PURE__ */ jsxDEV("span", { children: e.category === "cctv" ? "◉" : e.category === "conversation" ? "▤" : e.category === "photograph" ? "▧" : e.category === "witness" ? "❞" : "▦" }, void 0, false, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 4768
+              }, this),
+              /* @__PURE__ */ jsxDEV("small", { children: [
+                "EXHIBIT ",
+                String(i + 1).padStart(2, "0")
+              ] }, void 0, true, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 4923
+              }, this),
+              /* @__PURE__ */ jsxDEV("b", { children: e.category.toUpperCase() }, void 0, false, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 4978
+              }, this)
+            ] }, void 0, true, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 4714
+            }, this),
+            /* @__PURE__ */ jsxDEV("div", { className: "evidence-card-info", children: [
+              /* @__PURE__ */ jsxDEV("span", { className: "tiny-label", children: [
+                e.source,
+                " ",
+                e.timestamp && `· ${e.timestamp}`
+              ] }, void 0, true, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 5053
+              }, this),
+              /* @__PURE__ */ jsxDEV("h3", { children: e.title }, void 0, false, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 5135
+              }, this),
+              /* @__PURE__ */ jsxDEV("p", { children: e.description }, void 0, false, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 5153
+              }, this),
+              /* @__PURE__ */ jsxDEV("div", { className: "card-bottom", children: [
+                /* @__PURE__ */ jsxDEV("span", { children: [
+                  (inv?.reviewedEvidenceIds || []).includes(e.id) ? "✓ REVIEWED" : "OPEN EVIDENCE",
+                  " ↗"
+                ] }, void 0, true, {
+                  fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                  lineNumber: 30,
+                  columnNumber: 5204
+                }, this),
+                /* @__PURE__ */ jsxDEV("span", { children: [
+                  (e.relatedSuspectIds || []).length,
+                  " linked"
+                ] }, void 0, true, {
+                  fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                  lineNumber: 30,
+                  columnNumber: 5301
+                }, this)
+              ] }, void 0, true, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 5175
+              }, this)
+            ] }, void 0, true, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 5017
+            }, this)
+          ] }, e.id, true, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 4594
+          }, this)) }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 4542
+          }, this),
+          !shown.length && /* @__PURE__ */ jsxDEV("div", { className: "empty-inline", children: "No evidence matches that search." }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 5404
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 30,
+          columnNumber: 3920
+        }, this),
+        /* @__PURE__ */ jsxDEV("aside", { className: `notebook ${tab === "Notebook" ? "mobile-show" : ""}`, children: [
+          /* @__PURE__ */ jsxDEV("div", { className: "notebook-head", children: [
+            /* @__PURE__ */ jsxDEV("span", { className: "tiny-label", children: "DETECTIVE'S NOTEBOOK" }, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 5587
+            }, this),
+            /* @__PURE__ */ jsxDEV("span", { children: "✳" }, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 5643
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 5556
+          }, this),
+          /* @__PURE__ */ jsxDEV("label", { htmlFor: "notes", children: "YOUR PRIVATE NOTES" }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 5663
+          }, this),
+          /* @__PURE__ */ jsxDEV("textarea", { id: "notes", placeholder: "A detail to revisit…", defaultValue: inv?.notes || "", onBlur: (e) => saveNotes(e.target.value) }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 5712
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "save-state", children: saving ? "Saving notes…" : "Autosaves when you leave the field" }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 5844
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { className: "reviewed-box", children: [
+            /* @__PURE__ */ jsxDEV("span", { className: "tiny-label", children: "REVIEWED" }, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 5973
+            }, this),
+            /* @__PURE__ */ jsxDEV("b", { children: [
+              (inv?.reviewedEvidenceIds || []).length,
+              /* @__PURE__ */ jsxDEV("small", { children: [
+                " / ",
+                data.evidence.length
+              ] }, void 0, true, {
+                fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+                lineNumber: 30,
+                columnNumber: 6061
+              }, this)
+            ] }, void 0, true, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 6017
+            }, this),
+            /* @__PURE__ */ jsxDEV("div", { className: "progress-line", children: /* @__PURE__ */ jsxDEV("i", { style: { width: `${(inv?.reviewedEvidenceIds || []).length / data.evidence.length * 100}%` } }, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 6136
+            }, this) }, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 6105
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 5943
+          }, this),
+          /* @__PURE__ */ jsxDEV("button", { className: "button primary wide", onClick: () => setAccuse(true), children: [
+            "Name your suspect ",
+            /* @__PURE__ */ jsxDEV("span", { children: "↗" }, void 0, false, {
+              fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+              lineNumber: 30,
+              columnNumber: 6337
+            }, this)
+          ] }, void 0, true, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 6247
+          }, this),
+          /* @__PURE__ */ jsxDEV("p", { className: "notebook-hint", children: "One final accusation. Make it count." }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 6360
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 30,
+          columnNumber: 5483
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 30,
+        columnNumber: 2748
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 30,
+      columnNumber: 1815
+    }, this),
+    selected && detail && /* @__PURE__ */ jsxDEV("div", { className: "modal-backdrop", onClick: () => {
+      setSelected(null);
+      setDetail(null);
+    }, children: /* @__PURE__ */ jsxDEV("section", { className: "evidence-modal", onClick: (e) => e.stopPropagation(), children: [
+      /* @__PURE__ */ jsxDEV("button", { className: "modal-close", onClick: () => {
+        setSelected(null);
+        setDetail(null);
+      }, children: "×" }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 30,
+        columnNumber: 6631
+      }, this),
+      /* @__PURE__ */ jsxDEV("span", { className: "tiny-label", children: [
+        "EVIDENCE DETAIL · ",
+        detail.category.toUpperCase()
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 30,
+        columnNumber: 6726
+      }, this),
+      /* @__PURE__ */ jsxDEV("h2", { children: detail.title }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 30,
+        columnNumber: 6811
+      }, this),
+      /* @__PURE__ */ jsxDEV("p", { className: "modal-desc", children: detail.description }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 30,
+        columnNumber: 6834
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "detail-meta", children: [
+        /* @__PURE__ */ jsxDEV("span", { children: [
+          "ORIGIN",
+          /* @__PURE__ */ jsxDEV("strong", { children: detail.source }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 6925
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 30,
+          columnNumber: 6913
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { children: [
+          "TIME",
+          /* @__PURE__ */ jsxDEV("strong", { children: detail.timestamp || "Not recorded" }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 6974
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 30,
+          columnNumber: 6964
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 30,
+        columnNumber: 6884
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: `detail-art cover-${detail.category}`, children: detail.category === "conversation" ? /* @__PURE__ */ jsxDEV("div", { className: "chat-preview", children: [
+        /* @__PURE__ */ jsxDEV("span", { children: "ARCHIVED MESSAGES" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 30,
+          columnNumber: 7163
+        }, this),
+        /* @__PURE__ */ jsxDEV("p", { children: [
+          "Incoming · 11:08 PM",
+          /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 7215
+          }, this),
+          /* @__PURE__ */ jsxDEV("b", { children: detail.content }, void 0, false, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 30,
+            columnNumber: 7221
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 30,
+          columnNumber: 7193
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 30,
+        columnNumber: 7133
+      }, this) : detail.category === "cctv" ? /* @__PURE__ */ jsxDEV("div", { className: "cctv-preview", children: [
+        /* @__PURE__ */ jsxDEV("span", { children: "CAM 03 / FRAME CAPTURE" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 30,
+          columnNumber: 7316
+        }, this),
+        /* @__PURE__ */ jsxDEV("b", { children: [
+          "◉   ",
+          detail.timestamp || "23:41:08"
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 30,
+          columnNumber: 7351
+        }, this),
+        /* @__PURE__ */ jsxDEV("small", { children: "STILL FRAME · NOT VIDEO" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 30,
+          columnNumber: 7399
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 30,
+        columnNumber: 7286
+      }, this) : /* @__PURE__ */ jsxDEV("p", { children: detail.content }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 30,
+        columnNumber: 7446
+      }, this) }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 30,
+        columnNumber: 7040
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "observation", children: [
+        /* @__PURE__ */ jsxDEV("span", { className: "tiny-label", children: "EXHIBIT NOTES" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 30,
+          columnNumber: 7505
+        }, this),
+        /* @__PURE__ */ jsxDEV("p", { children: detail.content }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 30,
+          columnNumber: 7554
+        }, this),
+        detail.observations?.map((x) => /* @__PURE__ */ jsxDEV("p", { children: [
+          "• ",
+          x
+        ] }, x, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 30,
+          columnNumber: 7610
+        }, this))
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 30,
+        columnNumber: 7476
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { className: "button outline", onClick: () => {
+        setSelected(null);
+        setDetail(null);
+      }, children: "← Back to evidence" }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 30,
+        columnNumber: 7638
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 30,
+      columnNumber: 6558
+    }, this) }, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 30,
+      columnNumber: 6473
+    }, this),
+    accuse && /* @__PURE__ */ jsxDEV("div", { className: "modal-backdrop", children: /* @__PURE__ */ jsxDEV("section", { className: "accuse-modal", children: [
+      /* @__PURE__ */ jsxDEV("button", { className: "modal-close", onClick: () => setAccuse(false), children: "×" }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 30,
+        columnNumber: 7847
+      }, this),
+      /* @__PURE__ */ jsxDEV("span", { className: "tiny-label", children: "THE FINAL CALL" }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 30,
+        columnNumber: 7922
+      }, this),
+      /* @__PURE__ */ jsxDEV("h2", { children: "Who did it?" }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 30,
+        columnNumber: 7972
+      }, this),
+      /* @__PURE__ */ jsxDEV("p", { children: "Choose carefully. You can only make one final accusation." }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 30,
+        columnNumber: 7992
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "suspect-options", children: data.suspects.map((s) => /* @__PURE__ */ jsxDEV("label", { className: selected?.suspectId === s.id ? "selected" : "", children: [
+        /* @__PURE__ */ jsxDEV("input", { type: "radio", name: "culprit", value: s.id, onChange: () => setSelected({ suspectId: s.id, name: s.name }) }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 30,
+          columnNumber: 8192
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { children: s.name }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 30,
+          columnNumber: 8306
+        }, this),
+        /* @__PURE__ */ jsxDEV("small", { children: s.role }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 30,
+          columnNumber: 8327
+        }, this)
+      ] }, s.id, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 30,
+        columnNumber: 8115
+      }, this)) }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 30,
+        columnNumber: 8056
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { className: "button primary wide", disabled: !selected?.suspectId, onClick: () => nav(`/case/${id}/confirm/${selected.suspectId}`, { state: { name: selected.name } }), children: [
+        "Review accusation ",
+        /* @__PURE__ */ jsxDEV("span", { children: "↗" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 30,
+          columnNumber: 8557
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 30,
+        columnNumber: 8366
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { className: "text-button", onClick: () => setAccuse(false), children: "Keep investigating" }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 30,
+        columnNumber: 8580
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 30,
+      columnNumber: 7813
+    }, this) }, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 30,
+      columnNumber: 7781
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+    lineNumber: 30,
+    columnNumber: 1808
+  }, this);
+}
+_s3(CaseRoom, "Qkc3RymVle2WwUpLpzaZYHxYTw4=", false, function() {
+  return [useParams, useNavigate];
+});
+_c7 = CaseRoom;
+function Confirm() {
+  _s4();
+  const { id, suspectId } = useParams();
+  const nav = useNavigate(), location = useLocation();
+  const [name, setName] = useState(location.state?.name || "");
+  const [busy, setBusy] = useState(false), [error, setError] = useState("");
+  useEffect(() => {
+    if (!name) api(`/mysteries/${id}`).then((d) => setName(d.case.suspects.find((s) => s.id === suspectId)?.name || "your suspect")).catch((e) => setError(e.message));
+  }, [id, suspectId, name]);
+  async function submit() {
+    setBusy(true);
+    try {
+      await api(`/mysteries/${id}/accusation`, { method: "POST", body: JSON.stringify({ suspectId }) });
+      nav(`/case/${id}/results`);
+    } catch (e) {
+      setError(e.message);
+      setBusy(false);
+    }
+  }
+  return /* @__PURE__ */ jsxDEV(Shell, { children: /* @__PURE__ */ jsxDEV("main", { className: "confirm-page", children: [
+    /* @__PURE__ */ jsxDEV(Link, { className: "back-link", to: `/case/${id}`, children: "← Back to the case" }, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 31,
+      columnNumber: 720
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "confirm-card", children: [
+      /* @__PURE__ */ jsxDEV("span", { className: "confirm-seal", children: "◈" }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 31,
+        columnNumber: 822
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "eyebrow", children: [
+        /* @__PURE__ */ jsxDEV("i", {}, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 31,
+          columnNumber: 886
+        }, this),
+        " FINAL ACCUSATION"
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 31,
+        columnNumber: 861
+      }, this),
+      /* @__PURE__ */ jsxDEV("h1", { children: [
+        "You’re naming",
+        /* @__PURE__ */ jsxDEV("br", {}, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 31,
+          columnNumber: 931
+        }, this),
+        /* @__PURE__ */ jsxDEV("em", { children: [
+          name || "your suspect",
+          "."
+        ] }, void 0, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 31,
+          columnNumber: 937
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 31,
+        columnNumber: 914
+      }, this),
+      /* @__PURE__ */ jsxDEV("p", { children: "This is your one final accusation. Once submitted, the case will be closed and the truth revealed." }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 31,
+        columnNumber: 976
+      }, this),
+      error && /* @__PURE__ */ jsxDEV("div", { className: "error-box", children: error }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 31,
+        columnNumber: 1091
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { className: "button primary wide", disabled: busy || !name, onClick: submit, children: [
+        busy ? "Submitting…" : "Submit final accusation",
+        " ",
+        /* @__PURE__ */ jsxDEV("span", { children: "↗" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 31,
+          columnNumber: 1265
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 31,
+        columnNumber: 1132
+      }, this),
+      /* @__PURE__ */ jsxDEV(Link, { className: "text-button", to: `/case/${id}`, children: "I need another look" }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 31,
+        columnNumber: 1288
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 31,
+      columnNumber: 792
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+    lineNumber: 31,
+    columnNumber: 689
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+    lineNumber: 31,
+    columnNumber: 682
+  }, this);
+}
+_s4(Confirm, "VWb5aD2KlFNKdSNabEpK8wgW8pM=", false, function() {
+  return [useParams, useNavigate, useLocation];
+});
+_c8 = Confirm;
+function Results() {
+  _s5();
+  const { id } = useParams(), [result, setResult] = useState(null), [error, setError] = useState("");
+  useEffect(() => {
+    api(`/mysteries/${id}/results`).then(setResult).catch((e) => setError(e.message));
+  }, [id]);
+  return /* @__PURE__ */ jsxDEV(Shell, { children: /* @__PURE__ */ jsxDEV("main", { className: "results-page", children: error ? /* @__PURE__ */ jsxDEV("div", { className: "empty-state", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "error-box", children: error }, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 32,
+      columnNumber: 315
+    }, this),
+    /* @__PURE__ */ jsxDEV(Link, { to: `/case/${id}`, className: "button ghost", children: "← Return to the investigation" }, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 32,
+      columnNumber: 355
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+    lineNumber: 32,
+    columnNumber: 286
+  }, this) : !result ? /* @__PURE__ */ jsxDEV("div", { className: "loading-page", children: [
+    /* @__PURE__ */ jsxDEV("span", { className: "spinner" }, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 32,
+      columnNumber: 490
+    }, this),
+    " Unsealing the case…"
+  ] }, void 0, true, {
+    fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+    lineNumber: 32,
+    columnNumber: 460
+  }, this) : /* @__PURE__ */ jsxDEV(Fragment, { children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "result-stamp", children: "CASE CLOSED · SOLUTION REVEALED" }, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 32,
+      columnNumber: 549
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: `result-hero ${result.correct ? "correct" : "incorrect"}`, children: [
+      /* @__PURE__ */ jsxDEV("span", { children: result.correct ? "✓" : "×" }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 32,
+        columnNumber: 691
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "eyebrow", children: [
+        /* @__PURE__ */ jsxDEV("i", {}, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 32,
+          columnNumber: 757
+        }, this),
+        " ",
+        result.correct ? "A SHARP EYE" : "THE EVIDENCE LED ELSEWHERE"
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 32,
+        columnNumber: 732
+      }, this),
+      /* @__PURE__ */ jsxDEV("h1", { children: result.correct ? "You solved it." : "Not quite." }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 32,
+        columnNumber: 832
+      }, this),
+      /* @__PURE__ */ jsxDEV("p", { children: [
+        "You accused ",
+        /* @__PURE__ */ jsxDEV("strong", { children: result.submittedSuspect }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 32,
+          columnNumber: 906
+        }, this),
+        ". The culprit was ",
+        /* @__PURE__ */ jsxDEV("strong", { children: result.culprit }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 32,
+          columnNumber: 966
+        }, this),
+        "."
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 32,
+        columnNumber: 891
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 32,
+      columnNumber: 616
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "solution-panel", children: [
+      /* @__PURE__ */ jsxDEV("div", { children: [
+        /* @__PURE__ */ jsxDEV("span", { className: "tiny-label", children: "THE MOTIVE" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 32,
+          columnNumber: 1047
+        }, this),
+        /* @__PURE__ */ jsxDEV("p", { children: result.solution.motive }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 32,
+          columnNumber: 1093
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { className: "tiny-label", children: "HOW THE CASE BREAKS" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 32,
+          columnNumber: 1124
+        }, this),
+        /* @__PURE__ */ jsxDEV("p", { children: result.solution.explanation }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 32,
+          columnNumber: 1179
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 32,
+        columnNumber: 1042
+      }, this),
+      /* @__PURE__ */ jsxDEV("aside", { children: [
+        /* @__PURE__ */ jsxDEV("span", { className: "tiny-label", children: "THE REASONING" }, void 0, false, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 32,
+          columnNumber: 1228
+        }, this),
+        result.solution.reasoning.map((x, i) => /* @__PURE__ */ jsxDEV("p", { children: [
+          /* @__PURE__ */ jsxDEV("b", { children: [
+            "0",
+            i + 1
+          ] }, void 0, true, {
+            fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+            lineNumber: 32,
+            columnNumber: 1329
+          }, this),
+          x
+        ] }, x, true, {
+          fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+          lineNumber: 32,
+          columnNumber: 1318
+        }, this))
+      ] }, void 0, true, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 32,
+        columnNumber: 1221
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 32,
+      columnNumber: 1010
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "result-actions", children: [
+      /* @__PURE__ */ jsxDEV(Link, { to: `/case/${id}`, className: "button outline", children: "Review the evidence" }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 32,
+        columnNumber: 1399
+      }, this),
+      /* @__PURE__ */ jsxDEV(Link, { to: "/cases", className: "button ghost", children: "Case files" }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 32,
+        columnNumber: 1477
+      }, this),
+      /* @__PURE__ */ jsxDEV(Link, { to: "/create", className: "button primary", children: "Create another case ↗" }, void 0, false, {
+        fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+        lineNumber: 32,
+        columnNumber: 1537
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 32,
+      columnNumber: 1367
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+    lineNumber: 32,
+    columnNumber: 547
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+    lineNumber: 32,
+    columnNumber: 246
+  }, this) }, void 0, false, {
+    fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+    lineNumber: 32,
+    columnNumber: 239
+  }, this);
+}
+_s5(Results, "p6Me4CYqZ2JtmiqRRhSAOsJP04I=", false, function() {
+  return [useParams];
+});
+_c9 = Results;
+export default function App() {
+  return /* @__PURE__ */ jsxDEV(Routes, { children: [
+    /* @__PURE__ */ jsxDEV(Route, { path: "/", element: /* @__PURE__ */ jsxDEV(Landing, {}, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 33,
+      columnNumber: 72
+    }, this) }, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 33,
+      columnNumber: 47
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "/create", element: /* @__PURE__ */ jsxDEV(Create, {}, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 33,
+      columnNumber: 118
+    }, this) }, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 33,
+      columnNumber: 87
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "/cases", element: /* @__PURE__ */ jsxDEV(Cases, {}, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 33,
+      columnNumber: 162
+    }, this) }, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 33,
+      columnNumber: 132
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "/case/:id", element: /* @__PURE__ */ jsxDEV(CaseRoom, {}, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 33,
+      columnNumber: 208
+    }, this) }, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 33,
+      columnNumber: 175
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "/case/:id/confirm/:suspectId", element: /* @__PURE__ */ jsxDEV(Confirm, {}, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 33,
+      columnNumber: 276
+    }, this) }, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 33,
+      columnNumber: 224
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "/case/:id/results", element: /* @__PURE__ */ jsxDEV(Results, {}, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 33,
+      columnNumber: 332
+    }, this) }, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 33,
+      columnNumber: 291
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "*", element: /* @__PURE__ */ jsxDEV(Landing, {}, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 33,
+      columnNumber: 372
+    }, this) }, void 0, false, {
+      fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+      lineNumber: 33,
+      columnNumber: 347
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx",
+    lineNumber: 33,
+    columnNumber: 39
+  }, this);
+}
+_c0 = App;
+var _c, _c2, _c3, _c4, _c5, _c6, _c7, _c8, _c9, _c0;
+$RefreshReg$(_c, "Glyph");
+$RefreshReg$(_c2, "Header");
+$RefreshReg$(_c3, "Shell");
+$RefreshReg$(_c4, "Landing");
+$RefreshReg$(_c5, "Create");
+$RefreshReg$(_c6, "Cases");
+$RefreshReg$(_c7, "CaseRoom");
+$RefreshReg$(_c8, "Confirm");
+$RefreshReg$(_c9, "Results");
+$RefreshReg$(_c0, "App");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/Users/HP/OneDrive/文档/Projects/AI_Mystery_Room/client/src/screens/App.jsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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dXNlU3RhdGUiLCJMaW5rIiwidXNlTG9jYXRpb24iLCJ1c2VOYXZpZ2F0ZSIsInVzZVBhcmFtcyIsImFwaSIsIkdseXBoIiwiY2hpbGRyZW4iLCJfYyIsIkhlYWRlciIsIl9jMiIsIlNoZWxsIiwiX2MzIiwiTGFuZGluZyIsIl9jNCIsIkNyZWF0ZSIsIl9zIiwibmF2IiwiZm9ybSIsInNldEZvcm0iLCJzY2VuYXJpbyIsImRpZmZpY3VsdHkiLCJteXN0ZXJ5VHlwZSIsImV2aWRlbmNlQ291bnQiLCJidXN5Iiwic2V0QnVzeSIsImVycm9yIiwic2V0RXJyb3IiLCJjb3VudCIsImxlbmd0aCIsInN1Ym1pdCIsImUiLCJwcmV2ZW50RGVmYXVsdCIsImQiLCJtZXRob2QiLCJib2R5IiwiSlNPTiIsInN0cmluZ2lmeSIsImNhc2UiLCJpZCIsIm1lc3NhZ2UiLCJ0YXJnZXQiLCJ2YWx1ZSIsInRvTG9jYWxlU3RyaW5nIiwibWFwIiwieCIsIk51bWJlciIsIkFycmF5IiwiZnJvbSIsIl8iLCJpIiwiQ2FzZXMiLCJfczIiLCJjYXNlcyIsInNldENhc2VzIiwidGhlbiIsImNhdGNoIiwiYyIsIlN0cmluZyIsInNsaWNlIiwidG9VcHBlckNhc2UiLCJEYXRlIiwiY3JlYXRlZEF0IiwidG9Mb2NhbGVEYXRlU3RyaW5nIiwidGl0bGUiLCJ3aWR0aCIsIk1hdGgiLCJtaW4iLCJyZXZpZXdlZENvdW50Iiwic3RhdHVzIiwiQ2FzZVJvb20iLCJfczMiLCJkYXRhIiwic2V0RGF0YSIsImludiIsInNldEludiIsInNlbGVjdGVkIiwic2V0U2VsZWN0ZWQiLCJkZXRhaWwiLCJzZXREZXRhaWwiLCJmaWx0ZXIiLCJzZXRGaWx0ZXIiLCJzZWFyY2giLCJzZXRTZWFyY2giLCJzYXZpbmciLCJzZXRTYXZpbmciLCJ0YWIiLCJzZXRUYWIiLCJhY2N1c2UiLCJzZXRBY2N1c2UiLCJpbnZlc3RpZ2F0aW9uIiwiYWNjdXNhdGlvbiIsInN1Ym1pdHRlZEF0IiwicmVwbGFjZSIsImNhdHMiLCJzaG93biIsImV2aWRlbmNlIiwiY2F0ZWdvcnkiLCJkZXNjcmlwdGlvbiIsInRvTG93ZXJDYXNlIiwiaW5jbHVkZXMiLCJvcGVuRXZpZGVuY2UiLCJldmlkZW5jZUlkIiwic2F2ZU5vdGVzIiwibm90ZXMiLCJsb2NhdGlvbiIsImluY2lkZW50RGF0ZSIsInN1bW1hcnkiLCJzdXNwZWN0cyIsInMiLCJuYW1lIiwic3BsaXQiLCJqb2luIiwicm9sZSIsImJpbyIsImFsaWJpIiwic3RhdGVtZW50IiwidGltZWxpbmUiLCJmaW5kIiwidGltZXN0YW1wIiwiY2VydGFpbnR5IiwidG9TdHJpbmciLCJwYWRTdGFydCIsInNvdXJjZSIsInJldmlld2VkRXZpZGVuY2VJZHMiLCJyZWxhdGVkU3VzcGVjdElkcyIsInN0b3BQcm9wYWdhdGlvbiIsImNvbnRlbnQiLCJvYnNlcnZhdGlvbnMiLCJzdXNwZWN0SWQiLCJzdGF0ZSIsIkNvbmZpcm0iLCJfczQiLCJzZXROYW1lIiwiUmVzdWx0cyIsIl9zNSIsInJlc3VsdCIsInNldFJlc3VsdCIsImNvcnJlY3QiLCJzdWJtaXR0ZWRTdXNwZWN0IiwiY3VscHJpdCIsInNvbHV0aW9uIiwibW90aXZlIiwiZXhwbGFuYXRpb24iLCJyZWFzb25pbmciLCJBcHAiLCJfYzAiLCJfYzUiLCJfYzYiLCJfYzciLCJfYzgiLCJfYzkiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiQXBwLmpzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge3VzZUVmZmVjdCx1c2VNZW1vLHVzZVN0YXRlfSBmcm9tICdyZWFjdCc7XG5pbXBvcnQge0xpbmssdXNlTG9jYXRpb24sdXNlTmF2aWdhdGUsdXNlUGFyYW1zfSBmcm9tICdyZWFjdC1yb3V0ZXItZG9tJztcbmltcG9ydCB7YXBpfSBmcm9tICcuLi9hcGkuanMnO1xuXG5jb25zdCBHbHlwaD0oe2NoaWxkcmVufSk9PjxzcGFuIGNsYXNzTmFtZT1cImdseXBoXCIgYXJpYS1oaWRkZW49XCJ0cnVlXCI+e2NoaWxkcmVufTwvc3Bhbj47XG5mdW5jdGlvbiBIZWFkZXIoKXtyZXR1cm4gPGhlYWRlciBjbGFzc05hbWU9XCJ0b3BiYXJcIj48TGluayB0bz1cIi9cIiBjbGFzc05hbWU9XCJicmFuZFwiPjxzcGFuIGNsYXNzTmFtZT1cImJyYW5kLW1hcmtcIj48R2x5cGg+4peIPC9HbHlwaD48L3NwYW4+PHNwYW4+QUZURVI8c3BhbiBjbGFzc05hbWU9XCJhY2NlbnRcIj5IT1VSUzwvc3Bhbj48c21hbGw+VEhFIE1ZU1RFUlkgUk9PTTwvc21hbGw+PC9zcGFuPjwvTGluaz48bmF2PjxMaW5rIHRvPVwiL2Nhc2VzXCI+Q2FzZSBmaWxlczwvTGluaz48TGluayBjbGFzc05hbWU9XCJuYXYtY3RhXCIgdG89XCIvY3JlYXRlXCI+77yLIE5ldyBpbnZlc3RpZ2F0aW9uPC9MaW5rPjwvbmF2PjwvaGVhZGVyPn1cbmZ1bmN0aW9uIFNoZWxsKHtjaGlsZHJlbn0pe3JldHVybiA8ZGl2IGNsYXNzTmFtZT1cImFwcC1zaGVsbFwiPjxIZWFkZXIvPntjaGlsZHJlbn08Zm9vdGVyIGNsYXNzTmFtZT1cImZvb3RlclwiPjxzcGFuPkFGVEVSSE9VUlMgwrcgQSBGSUNUSU9OQUwgSU5WRVNUSUdBVElPTiBTVFVESU88L3NwYW4+PHNwYW4+Rm9sbG93IHRoZSBldmlkZW5jZS4gRmluZCB0aGUgdHJ1dGguPC9zcGFuPjwvZm9vdGVyPjwvZGl2Pn1cbmZ1bmN0aW9uIExhbmRpbmcoKXtyZXR1cm4gPFNoZWxsPjxtYWluIGNsYXNzTmFtZT1cImxhbmRpbmdcIj48ZGl2IGNsYXNzTmFtZT1cImhlcm8tY29weVwiPjxkaXYgY2xhc3NOYW1lPVwiZXllYnJvd1wiPjxpLz4gQU4gSU5WRVNUSUdBVElPTiBCVUlMVCBBUk9VTkQgWU9VUiBTVE9SWTwvZGl2PjxoMT5FdmVyeSBteXN0ZXJ5PGJyLz5oYXMgYSA8ZW0+dHJ1dGguPC9lbT48L2gxPjxwPkJyaW5nIHVzIGEgc3RyYW5nZSBsaXR0bGUgc3RvcnkuIExlYXZlIHdpdGggYSBjYXNlIGZpbGUgZnVsbCBvZiBzdXNwZWN0cywgY2x1ZXMsIGFuZCBvbmUgYW5zd2VyIGhpZGluZyBpbiBwbGFpbiBzaWdodC48L3A+PGRpdiBjbGFzc05hbWU9XCJoZXJvLWFjdGlvbnNcIj48TGluayBjbGFzc05hbWU9XCJidXR0b24gcHJpbWFyeVwiIHRvPVwiL2NyZWF0ZVwiPkNyZWF0ZSBhIG15c3RlcnkgPHNwYW4+4oaXPC9zcGFuPjwvTGluaz48TGluayBjbGFzc05hbWU9XCJidXR0b24gZ2hvc3RcIiB0bz1cIi9jYXNlc1wiPkV4cGxvcmUgeW91ciBjYXNlcyA8c3Bhbj7ihpI8L3NwYW4+PC9MaW5rPjwvZGl2PjxkaXYgY2xhc3NOYW1lPVwiaGVyby1ub3RlXCI+PHNwYW4gY2xhc3NOYW1lPVwiYXZhdGFyLXN0YWNrXCI+PGI+SjwvYj48Yj5NPC9iPjxiPlI8L2I+PC9zcGFuPjxzcGFuPk1hZGUgZm9yIGN1cmlvdXMgbWluZHM8YnIvPjxzdHJvbmc+RXZlcnkgY2FzZSBpcyB5b3VycyB0byBzb2x2ZTwvc3Ryb25nPjwvc3Bhbj48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzTmFtZT1cImNhc2UtYXJ0XCI+PGRpdiBjbGFzc05hbWU9XCJhcnQtd2FzaFwiLz48ZGl2IGNsYXNzTmFtZT1cImZpbGUtY2FyZFwiPjxkaXYgY2xhc3NOYW1lPVwiZmlsZS10b3BcIj48c3Bhbj5DQVNFIEZJTEUgwrcgMDA4NDwvc3Bhbj48c3BhbiBjbGFzc05hbWU9XCJyZWRhY3RlZC1sYWJlbFwiPkNMQVNTSUZJRUQ8L3NwYW4+PC9kaXY+PGRpdiBjbGFzc05hbWU9XCJmaWxlLXBob3RvXCI+PGRpdiBjbGFzc05hbWU9XCJtb29uXCIvPjxkaXYgY2xhc3NOYW1lPVwiYnVpbGRpbmdcIj48aS8+PGkvPjxpLz48aS8+PC9kaXY+PHNwYW4gY2xhc3NOYW1lPVwicGhvdG8tc3RhbXBcIj5OT1JUSCBXSU5HIMK3IDIzOjQxPC9zcGFuPjxzcGFuIGNsYXNzTmFtZT1cInRhcmdldC1yaW5nXCIvPjwvZGl2PjxkaXYgY2xhc3NOYW1lPVwiZmlsZS1kZXRhaWxzXCI+PHNwYW4gY2xhc3NOYW1lPVwidGlueS1sYWJlbFwiPlRIRSBNQVJST1cgSE9URUw8L3NwYW4+PGgzPlRoZSByb29tIHRoYXQ8YnIvPndhcyBuZXZlciBsb2NrZWQ8L2gzPjxkaXYgY2xhc3NOYW1lPVwiZmlsZS1tZXRhXCI+PHNwYW4+NiBQSUVDRVMgT0YgRVZJREVOQ0U8L3NwYW4+PHNwYW4+4peJIFVOU09MVkVEPC9zcGFuPjwvZGl2PjwvZGl2PjxkaXYgY2xhc3NOYW1lPVwiZmlsZS10YWdcIj5BIENBU0UgVE8gQ1JBQ0sgPGI+4oaXPC9iPjwvZGl2PjwvZGl2PjxkaXYgY2xhc3NOYW1lPVwiZmxvYXRpbmctbm90ZVwiPjxzcGFuPkZJRUxEIE5PVEUgMDQ8L3NwYW4+PHA+4oCcVGhlIGNsb2NrIHN0b3BwZWQ8YnIvPmF0IDExOjE3LiBJdCB3YXMgc3RpbGw8YnIvPnJ1bm5pbmcgYXQgbWlkbmlnaHQu4oCdPC9wPjxzbWFsbD7igJQgTS4gVkFMRSwgTklHSFQgQ0xFUks8L3NtYWxsPjwvZGl2PjxkaXYgY2xhc3NOYW1lPVwib3JiaXQgb3JiaXQtb25lXCIvPjxkaXYgY2xhc3NOYW1lPVwib3JiaXQgb3JiaXQtdHdvXCIvPjwvZGl2PjxzZWN0aW9uIGNsYXNzTmFtZT1cImZlYXR1cmUtc3RyaXBcIj48ZGl2PjxzcGFuPjAxIC8gQlVJTEQ8L3NwYW4+PGgzPllvdXIgc3RvcnksIGEgY2FzZS48L2gzPjxwPlNldCB0aGUgc2NlbmUuIEFJIGNyZWF0ZXMgYSBjb21wbGV0ZSwgb25lLW9mLWEta2luZCBteXN0ZXJ5LjwvcD48L2Rpdj48ZGl2PjxzcGFuPjAyIC8gSU5WRVNUSUdBVEU8L3NwYW4+PGgzPkV2ZXJ5IGRldGFpbCBtYXR0ZXJzLjwvaDM+PHA+UmVhZCBzdGF0ZW1lbnRzLCBzaWZ0IHJlY29yZHMsIGFuZCBjb25uZWN0IHRoZSB0aW1lbGluZS48L3A+PC9kaXY+PGRpdj48c3Bhbj4wMyAvIFNPTFZFPC9zcGFuPjxoMz5NYWtlIHlvdXIgY2FsbC48L2gzPjxwPk9uZSBhY2N1c2F0aW9uLiBBIGhpZGRlbiB0cnV0aC4gVGhlIGV2aWRlbmNlIHNwZWFrcy48L3A+PC9kaXY+PC9zZWN0aW9uPjwvbWFpbj48L1NoZWxsPn1cbmZ1bmN0aW9uIENyZWF0ZSgpe2NvbnN0IG5hdj11c2VOYXZpZ2F0ZSgpO2NvbnN0IFtmb3JtLHNldEZvcm1dPXVzZVN0YXRlKHtzY2VuYXJpbzonJyxkaWZmaWN1bHR5OidNZWRpdW0nLG15c3RlcnlUeXBlOidBbnknLGV2aWRlbmNlQ291bnQ6OH0pO2NvbnN0IFtidXN5LHNldEJ1c3ldPXVzZVN0YXRlKGZhbHNlKTtjb25zdCBbZXJyb3Isc2V0RXJyb3JdPXVzZVN0YXRlKCcnKTtjb25zdCBjb3VudD1mb3JtLnNjZW5hcmlvLmxlbmd0aDthc3luYyBmdW5jdGlvbiBzdWJtaXQoZSl7ZS5wcmV2ZW50RGVmYXVsdCgpO2lmKGNvdW50PDMwfHxjb3VudD4yMDAwKXJldHVybjtzZXRCdXN5KHRydWUpO3NldEVycm9yKCcnKTt0cnl7Y29uc3QgZD1hd2FpdCBhcGkoJy9teXN0ZXJpZXMnLHttZXRob2Q6J1BPU1QnLGJvZHk6SlNPTi5zdHJpbmdpZnkoZm9ybSl9KTtuYXYoYC9jYXNlLyR7ZC5jYXNlLmlkfWApfWNhdGNoKGUpe3NldEVycm9yKGUubWVzc2FnZSk7c2V0QnVzeShmYWxzZSl9fXJldHVybiA8U2hlbGw+PG1haW4gY2xhc3NOYW1lPVwiZm9ybS1wYWdlXCI+PGRpdiBjbGFzc05hbWU9XCJmb3JtLWludHJvXCI+PGRpdiBjbGFzc05hbWU9XCJleWVicm93XCI+PGkvPiBDQVNFIENSRUFUSU9OIC8gMDE8L2Rpdj48aDE+U3RhcnQgd2l0aCBhPGJyLz48ZW0+d2hhdCBpZi48L2VtPjwvaDE+PHA+R2l2ZSB1cyB0aGUgc2VlZCBvZiBhIHN0b3J5LiBXZSdsbCBidWlsZCB0aGUgc3VzcGVjdHMsIHRoZSBldmlkZW5jZSwgYW5kIHRoZSB0cnV0aCBhcm91bmQgaXQuPC9wPjxkaXYgY2xhc3NOYW1lPVwicHJvbWlzZVwiPjxHbHlwaD7inLM8L0dseXBoPjxzcGFuPjxiPkV2ZXJ5IGNhc2UgaXMgc29sdmFibGUuPC9iPjxici8+VGhlIGFuc3dlciBpcyBmaXhlZCBiZWZvcmUgdGhlIGludmVzdGlnYXRpb24gYmVnaW5zLjwvc3Bhbj48L2Rpdj48L2Rpdj48Zm9ybSBjbGFzc05hbWU9XCJjcmVhdGUtcGFuZWxcIiBvblN1Ym1pdD17c3VibWl0fT48ZGl2IGNsYXNzTmFtZT1cInBhbmVsLWhlYWRcIj48ZGl2PjxzcGFuIGNsYXNzTmFtZT1cInRpbnktbGFiZWxcIj5ZT1VSIENBU0UgQkVHSU5TIEhFUkU8L3NwYW4+PGgyPlNldCB0aGUgc2NlbmU8L2gyPjwvZGl2PjxzcGFuIGNsYXNzTmFtZT1cInN0ZXAtaW5kaWNhdG9yXCI+MDEgPGkvPiAwMjwvc3Bhbj48L2Rpdj48bGFiZWwgaHRtbEZvcj1cInNjZW5hcmlvXCI+VEhFIFNDRU5BUklPIDxzcGFuPlJlcXVpcmVkPC9zcGFuPjwvbGFiZWw+PHRleHRhcmVhIGlkPVwic2NlbmFyaW9cIiB2YWx1ZT17Zm9ybS5zY2VuYXJpb30gbWF4TGVuZ3RoPXsyMDAwfSBvbkNoYW5nZT17ZT0+c2V0Rm9ybSh7Li4uZm9ybSxzY2VuYXJpbzplLnRhcmdldC52YWx1ZX0pfSBwbGFjZWhvbGRlcj1cIkEgbG9ja2VkIHJvb20uIEEgbWlzc2luZyBoZWlybG9vbS4gVGhyZWUgcGVvcGxlIHdpdGggYSByZWFzb24gdG8gbGll4oCmXCIgcmVxdWlyZWQgbWluTGVuZ3RoPXszMH0vPjxkaXYgY2xhc3NOYW1lPVwiY291bnRlclwiPntjb3VudC50b0xvY2FsZVN0cmluZygpfSAvIDIsMDAwIGNoYXJhY3RlcnMgPHNwYW4+e2NvdW50PDMwP2AkezMwLWNvdW50fSBtb3JlIHRvIGdvYDpjb3VudD4xOTUwPydBbG1vc3QgYXQgdGhlIGxpbWl0JzonJ308L3NwYW4+PC9kaXY+PGRpdiBjbGFzc05hbWU9XCJmaWVsZC1yb3dcIj48ZGl2PjxsYWJlbCBodG1sRm9yPVwiZGlmZmljdWx0eVwiPkRJRkZJQ1VMVFk8L2xhYmVsPjxzZWxlY3QgaWQ9XCJkaWZmaWN1bHR5XCIgdmFsdWU9e2Zvcm0uZGlmZmljdWx0eX0gb25DaGFuZ2U9e2U9PnNldEZvcm0oey4uLmZvcm0sZGlmZmljdWx0eTplLnRhcmdldC52YWx1ZX0pfT48b3B0aW9uPkVhc3k8L29wdGlvbj48b3B0aW9uPk1lZGl1bTwvb3B0aW9uPjxvcHRpb24+SGFyZDwvb3B0aW9uPjwvc2VsZWN0PjwvZGl2PjxkaXY+PGxhYmVsIGh0bWxGb3I9XCJ0eXBlXCI+Q0FTRSBUWVBFPC9sYWJlbD48c2VsZWN0IGlkPVwidHlwZVwiIHZhbHVlPXtmb3JtLm15c3RlcnlUeXBlfSBvbkNoYW5nZT17ZT0+c2V0Rm9ybSh7Li4uZm9ybSxteXN0ZXJ5VHlwZTplLnRhcmdldC52YWx1ZX0pfT57WydBbnknLCdUaGVmdCcsJ011cmRlcicsJ0Rpc2FwcGVhcmFuY2UnLCdDeWJlcmNyaW1lJywnR2VuZXJhbCBJbmNpZGVudCddLm1hcCh4PT48b3B0aW9uIGtleT17eH0+e3h9PC9vcHRpb24+KX08L3NlbGVjdD48L2Rpdj48ZGl2PjxsYWJlbCBodG1sRm9yPVwiZXZpZGVuY2VcIj5FVklERU5DRTwvbGFiZWw+PHNlbGVjdCBpZD1cImV2aWRlbmNlXCIgdmFsdWU9e2Zvcm0uZXZpZGVuY2VDb3VudH0gb25DaGFuZ2U9e2U9PnNldEZvcm0oey4uLmZvcm0sZXZpZGVuY2VDb3VudDpOdW1iZXIoZS50YXJnZXQudmFsdWUpfSl9PntBcnJheS5mcm9tKHtsZW5ndGg6N30sKF8saSk9PmkrNikubWFwKHg9PjxvcHRpb24ga2V5PXt4fSB2YWx1ZT17eH0+e3h9IGl0ZW1zPC9vcHRpb24+KX08L3NlbGVjdD48L2Rpdj48L2Rpdj57ZXJyb3ImJjxkaXYgY2xhc3NOYW1lPVwiZXJyb3ItYm94XCI+PEdseXBoPiE8L0dseXBoPntlcnJvcn08L2Rpdj59PGJ1dHRvbiBjbGFzc05hbWU9XCJidXR0b24gcHJpbWFyeSB3aWRlXCIgZGlzYWJsZWQ9e2J1c3l8fGNvdW50PDMwfHxjb3VudD4yMDAwfT57YnVzeT88PjxzcGFuIGNsYXNzTmFtZT1cInNwaW5uZXJcIi8+IEJ1aWxkaW5nIHlvdXIgY2FzZeKApjwvPjo8PkdlbmVyYXRlIG15IGNhc2UgPHNwYW4+4oaXPC9zcGFuPjwvPn08L2J1dHRvbj48cCBjbGFzc05hbWU9XCJwcml2YWN5LW5vdGVcIj48R2x5cGg+4oyRPC9HbHlwaD4gWW91ciBjYXNlIGlzIHByaXZhdGUgdG8gdGhpcyBicm93c2VyIHNlc3Npb24uPC9wPjwvZm9ybT48L21haW4+PC9TaGVsbD59XG5mdW5jdGlvbiBDYXNlcygpe2NvbnN0W2Nhc2VzLHNldENhc2VzXT11c2VTdGF0ZShbXSksW2Vycm9yLHNldEVycm9yXT11c2VTdGF0ZSgnJyk7dXNlRWZmZWN0KCgpPT57YXBpKCcvbXlzdGVyaWVzJykudGhlbihzZXRDYXNlcykuY2F0Y2goZT0+c2V0RXJyb3IoZS5tZXNzYWdlKSl9LFtdKTtyZXR1cm4gPFNoZWxsPjxtYWluIGNsYXNzTmFtZT1cImNhc2VzLXBhZ2VcIj48ZGl2IGNsYXNzTmFtZT1cImV5ZWJyb3dcIj48aS8+IFlPVVIgUFJJVkFURSBBUkNISVZFPC9kaXY+PGRpdiBjbGFzc05hbWU9XCJjYXNlcy1oZWFkXCI+PGRpdj48aDE+Q2FzZSA8ZW0+ZmlsZXMuPC9lbT48L2gxPjxwPkV2ZXJ5IHN0b3J5IGxlYXZlcyBhIHRyYWlsLjwvcD48L2Rpdj48TGluayB0bz1cIi9jcmVhdGVcIiBjbGFzc05hbWU9XCJidXR0b24gcHJpbWFyeVwiPu+8iyBOZXcgY2FzZTwvTGluaz48L2Rpdj57ZXJyb3ImJjxkaXYgY2xhc3NOYW1lPVwiZXJyb3ItYm94XCI+e2Vycm9yfTwvZGl2Pn17IWVycm9yJiYhY2FzZXMubGVuZ3RoPzxkaXYgY2xhc3NOYW1lPVwiZW1wdHktc3RhdGVcIj48c3BhbiBjbGFzc05hbWU9XCJlbXB0eS1pY29uXCI+4oyVPC9zcGFuPjxoMj5ObyBvcGVuIGZpbGVzLiBZZXQuPC9oMj48cD5Zb3VyIG5leHQgbXlzdGVyeSBpcyBvbmUgc3RvcnkgYXdheS48L3A+PExpbmsgdG89XCIvY3JlYXRlXCIgY2xhc3NOYW1lPVwiYnV0dG9uIHByaW1hcnlcIj5DcmVhdGUgeW91ciBmaXJzdCBjYXNlIDxzcGFuPuKGlzwvc3Bhbj48L0xpbms+PC9kaXY+OjxkaXYgY2xhc3NOYW1lPVwiY2FzZS1ncmlkXCI+e2Nhc2VzLm1hcChjPT48TGluayBjbGFzc05hbWU9XCJoaXN0b3J5LWNhcmRcIiBrZXk9e2MuaWR9IHRvPXtgL2Nhc2UvJHtjLmlkfWB9PjxkaXYgY2xhc3NOYW1lPVwiaGlzdG9yeS1hcnRcIj48c3Bhbj5DQVNFIEZJTEUgwrcge1N0cmluZyhjLmlkKS5zbGljZSgtNSkudG9VcHBlckNhc2UoKX08L3NwYW4+PGI+e2MuZGlmZmljdWx0eX08L2I+PGRpdiBjbGFzc05hbWU9XCJoaXN0b3J5LXNpZ2lsXCI+4peIPC9kaXY+PC9kaXY+PGRpdiBjbGFzc05hbWU9XCJoaXN0b3J5LWluZm9cIj48c3BhbiBjbGFzc05hbWU9XCJ0aW55LWxhYmVsXCI+e2MubXlzdGVyeVR5cGV9IMK3IHtuZXcgRGF0ZShjLmNyZWF0ZWRBdCkudG9Mb2NhbGVEYXRlU3RyaW5nKCl9PC9zcGFuPjxoMz57Yy50aXRsZX08L2gzPjxkaXYgY2xhc3NOYW1lPVwicHJvZ3Jlc3MtbGluZVwiPjxpIHN0eWxlPXt7d2lkdGg6YCR7TWF0aC5taW4oMTAwLGMucmV2aWV3ZWRDb3VudC9jLmV2aWRlbmNlQ291bnQqMTAwKX0lYH19Lz48L2Rpdj48ZGl2IGNsYXNzTmFtZT1cImhpc3RvcnktZm9vdFwiPjxzcGFuPntjLnJldmlld2VkQ291bnR9L3tjLmV2aWRlbmNlQ291bnR9IGNsdWVzIHJldmlld2VkPC9zcGFuPjxzcGFuPntjLnN0YXR1cy50b1VwcGVyQ2FzZSgpfSDihpc8L3NwYW4+PC9kaXY+PC9kaXY+PC9MaW5rPil9PC9kaXY+fTwvbWFpbj48L1NoZWxsPn1cbmZ1bmN0aW9uIENhc2VSb29tKCl7Y29uc3R7aWR9PXVzZVBhcmFtcygpO2NvbnN0IG5hdj11c2VOYXZpZ2F0ZSgpO2NvbnN0W2RhdGEsc2V0RGF0YV09dXNlU3RhdGUobnVsbCksW2ludixzZXRJbnZdPXVzZVN0YXRlKG51bGwpLFtzZWxlY3RlZCxzZXRTZWxlY3RlZF09dXNlU3RhdGUobnVsbCksW2RldGFpbCxzZXREZXRhaWxdPXVzZVN0YXRlKG51bGwpLFtmaWx0ZXIsc2V0RmlsdGVyXT11c2VTdGF0ZSgnQWxsJyksW3NlYXJjaCxzZXRTZWFyY2hdPXVzZVN0YXRlKCcnKSxbZXJyb3Isc2V0RXJyb3JdPXVzZVN0YXRlKCcnKSxbc2F2aW5nLHNldFNhdmluZ109dXNlU3RhdGUoZmFsc2UpLFt0YWIsc2V0VGFiXT11c2VTdGF0ZSgnRXZpZGVuY2UnKSxbYWNjdXNlLHNldEFjY3VzZV09dXNlU3RhdGUoZmFsc2UpO3VzZUVmZmVjdCgoKT0+e2FwaShgL215c3Rlcmllcy8ke2lkfWApLnRoZW4oZD0+e3NldERhdGEoZC5jYXNlKTtzZXRJbnYoZC5pbnZlc3RpZ2F0aW9uKTtpZihkLmludmVzdGlnYXRpb24/LmFjY3VzYXRpb24/LnN1Ym1pdHRlZEF0KW5hdihgL2Nhc2UvJHtpZH0vcmVzdWx0c2Ase3JlcGxhY2U6dHJ1ZX0pfSkuY2F0Y2goZT0+c2V0RXJyb3IoZS5tZXNzYWdlKSl9LFtpZF0pO2NvbnN0IGNhdHM9WydBbGwnLCdjb252ZXJzYXRpb24nLCdwaG90b2dyYXBoJywnY2N0dicsJ3dpdG5lc3MnLCdyZWNvcmQnXTtjb25zdCBzaG93bj11c2VNZW1vKCgpPT5kYXRhPy5ldmlkZW5jZS5maWx0ZXIoZT0+KGZpbHRlcj09PSdBbGwnfHxlLmNhdGVnb3J5PT09ZmlsdGVyKSYmKGUudGl0bGUrZS5kZXNjcmlwdGlvbikudG9Mb3dlckNhc2UoKS5pbmNsdWRlcyhzZWFyY2gudG9Mb3dlckNhc2UoKSkpfHxbXSxbZGF0YSxmaWx0ZXIsc2VhcmNoXSk7YXN5bmMgZnVuY3Rpb24gb3BlbkV2aWRlbmNlKGUpe3NldFNlbGVjdGVkKGUpO3RyeXtjb25zdCBkPWF3YWl0IGFwaShgL215c3Rlcmllcy8ke2lkfS9ldmlkZW5jZS8ke2UuaWR9YCk7c2V0RGV0YWlsKGQpO2NvbnN0IGk9YXdhaXQgYXBpKGAvbXlzdGVyaWVzLyR7aWR9L2ludmVzdGlnYXRpb24vcmV2aWV3ZWRgLHttZXRob2Q6J1BBVENIJyxib2R5OkpTT04uc3RyaW5naWZ5KHtldmlkZW5jZUlkOmUuaWR9KX0pO3NldEludihpKX1jYXRjaChlKXtzZXRFcnJvcihlLm1lc3NhZ2UpfX1hc3luYyBmdW5jdGlvbiBzYXZlTm90ZXModmFsdWUpe3NldFNhdmluZyh0cnVlKTt0cnl7c2V0SW52KGF3YWl0IGFwaShgL215c3Rlcmllcy8ke2lkfS9pbnZlc3RpZ2F0aW9uL25vdGVzYCx7bWV0aG9kOidQQVRDSCcsYm9keTpKU09OLnN0cmluZ2lmeSh7bm90ZXM6dmFsdWV9KX0pKX1jYXRjaChlKXtzZXRFcnJvcihlLm1lc3NhZ2UpfWZpbmFsbHl7c2V0U2F2aW5nKGZhbHNlKX19aWYoZXJyb3ImJiFkYXRhKXJldHVybiA8U2hlbGw+PG1haW4gY2xhc3NOYW1lPVwiZXJyb3ItcGFnZVwiPjxkaXYgY2xhc3NOYW1lPVwiZXJyb3ItYm94XCI+e2Vycm9yfTwvZGl2PjxMaW5rIHRvPVwiL2Nhc2VzXCIgY2xhc3NOYW1lPVwiYnV0dG9uIGdob3N0XCI+4oaQIEJhY2sgdG8gZmlsZXM8L0xpbms+PC9tYWluPjwvU2hlbGw+O2lmKCFkYXRhKXJldHVybiA8U2hlbGw+PG1haW4gY2xhc3NOYW1lPVwibG9hZGluZy1wYWdlXCI+PHNwYW4gY2xhc3NOYW1lPVwic3Bpbm5lclwiLz4gT3BlbmluZyBjYXNlIGZpbGXigKY8L21haW4+PC9TaGVsbD47cmV0dXJuIDxTaGVsbD48bWFpbiBjbGFzc05hbWU9XCJyb29tLXBhZ2VcIj48ZGl2IGNsYXNzTmFtZT1cInJvb20taGVhZGluZ1wiPjxkaXY+PGRpdiBjbGFzc05hbWU9XCJleWVicm93XCI+PGkvPiBBQ1RJVkUgSU5WRVNUSUdBVElPTiA8c3BhbiBjbGFzc05hbWU9XCJjYXNlLW51bWJlclwiPi8ge1N0cmluZyhkYXRhLmlkKS5zbGljZSgtNikudG9VcHBlckNhc2UoKX08L3NwYW4+PC9kaXY+PGgxPntkYXRhLnRpdGxlfTwvaDE+PHA+e2RhdGEubG9jYXRpb259IDxzcGFuPsK3PC9zcGFuPiB7ZGF0YS5pbmNpZGVudERhdGV9IDxzcGFuPsK3PC9zcGFuPiB7ZGF0YS5kaWZmaWN1bHR5fTwvcD48L2Rpdj48YnV0dG9uIGNsYXNzTmFtZT1cImJ1dHRvbiBvdXRsaW5lXCIgb25DbGljaz17KCk9PnNldEFjY3VzZSh0cnVlKX0+TWFrZSBhbiBhY2N1c2F0aW9uIDxzcGFuPuKGlzwvc3Bhbj48L2J1dHRvbj48L2Rpdj48ZGl2IGNsYXNzTmFtZT1cImNhc2Utc3VtbWFyeVwiPjxkaXY+PHNwYW4gY2xhc3NOYW1lPVwidGlueS1sYWJlbFwiPlRIRSBCUklFRjwvc3Bhbj48cD57ZGF0YS5zdW1tYXJ5fTwvcD48L2Rpdj48ZGl2IGNsYXNzTmFtZT1cImJyaWVmLXN0YXRcIj48Yj57ZGF0YS5zdXNwZWN0cy5sZW5ndGh9PC9iPjxzcGFuPlBFUlNPTlMgT0Y8YnIvPklOVEVSRVNUPC9zcGFuPjwvZGl2PjxkaXYgY2xhc3NOYW1lPVwiYnJpZWYtc3RhdFwiPjxiPntkYXRhLmV2aWRlbmNlLmxlbmd0aH08L2I+PHNwYW4+UElFQ0VTIE9GPGJyLz5FVklERU5DRTwvc3Bhbj48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzTmFtZT1cIm1vYmlsZS10YWJzXCI+e1snRXZpZGVuY2UnLCdQZW9wbGUnLCdUaW1lbGluZScsJ05vdGVib29rJ10ubWFwKHg9PjxidXR0b24gY2xhc3NOYW1lPXt0YWI9PT14PydhY3RpdmUnOicnfSBvbkNsaWNrPXsoKT0+c2V0VGFiKHgpfSBrZXk9e3h9Pnt4fTwvYnV0dG9uPil9PC9kaXY+PGRpdiBjbGFzc05hbWU9XCJyb29tLWdyaWRcIj48YXNpZGUgY2xhc3NOYW1lPXtgcm9vbS1zaWRlICR7dGFiPT09J1Blb3BsZSc/J21vYmlsZS1zaG93JzonJ31gfT48ZGl2IGNsYXNzTmFtZT1cInNpZGUtaGVhZFwiPjxzcGFuIGNsYXNzTmFtZT1cInRpbnktbGFiZWxcIj5QRVJTT05TIE9GIElOVEVSRVNUPC9zcGFuPjxzcGFuPntkYXRhLnN1c3BlY3RzLmxlbmd0aH08L3NwYW4+PC9kaXY+e2RhdGEuc3VzcGVjdHMubWFwKChzLGkpPT48YXJ0aWNsZSBjbGFzc05hbWU9XCJzdXNwZWN0LXJvd1wiIGtleT17cy5pZH0+PGRpdiBjbGFzc05hbWU9e2BzdXNwZWN0LWF2YXRhciBhdmF0YXItJHtpJTV9YH0+e3MubmFtZS5zcGxpdCgnICcpLm1hcCh4PT54WzBdKS5qb2luKCcnKS5zbGljZSgwLDIpfTwvZGl2PjxkaXY+PGI+e3MubmFtZX08L2I+PHNwYW4+e3Mucm9sZX08L3NwYW4+PC9kaXY+PHNwYW4gY2xhc3NOYW1lPVwic3VzcGVjdC1hcnJvd1wiPuKGlzwvc3Bhbj48ZGV0YWlscyBjbGFzc05hbWU9XCJzdXNwZWN0LWRldGFpbFwiPjxzdW1tYXJ5PlZpZXcgcHJvZmlsZTwvc3VtbWFyeT48cD57cy5iaW99PC9wPjxzbWFsbD5DTEFJTUVEIEFMSUJJPC9zbWFsbD48cD57cy5hbGliaX08L3A+PHNtYWxsPlNUQVRFTUVOVDwvc21hbGw+PHA+e3Muc3RhdGVtZW50fTwvcD48L2RldGFpbHM+PC9hcnRpY2xlPil9PGRpdiBjbGFzc05hbWU9XCJ0aW1lbGluZS1ibG9ja1wiPjxkaXYgY2xhc3NOYW1lPVwic2lkZS1oZWFkXCI+PHNwYW4gY2xhc3NOYW1lPVwidGlueS1sYWJlbFwiPkNBU0UgVElNRUxJTkU8L3NwYW4+PHNwYW4+4oaXPC9zcGFuPjwvZGl2PntkYXRhLnRpbWVsaW5lLm1hcCgoZSxpKT0+PGJ1dHRvbiBrZXk9e2Ake2UudGltZXN0YW1wfSR7aX1gfSBjbGFzc05hbWU9XCJ0aW1lbGluZS1ldmVudFwiIG9uQ2xpY2s9eygpPT57Y29uc3QgdGFyZ2V0PWRhdGEuZXZpZGVuY2UuZmluZCh4PT54LmlkPT09ZS5ldmlkZW5jZUlkKTtpZih0YXJnZXQpe3NldFRhYignRXZpZGVuY2UnKTtvcGVuRXZpZGVuY2UodGFyZ2V0KX19fT48c3BhbiBjbGFzc05hbWU9XCJ0aW1lbGluZS1kb3RcIi8+PHNtYWxsPntlLnRpbWVzdGFtcH08L3NtYWxsPjxiPntlLmRlc2NyaXB0aW9ufTwvYj48ZW0+e2UuY2VydGFpbnR5fTwvZW0+PC9idXR0b24+KX08L2Rpdj48L2FzaWRlPjxzZWN0aW9uIGNsYXNzTmFtZT17YGV2aWRlbmNlLW1haW4gJHt0YWI9PT0nRXZpZGVuY2UnPydtb2JpbGUtc2hvdyc6Jyd9YH0+PGRpdiBjbGFzc05hbWU9XCJldmlkZW5jZS10aXRsZVwiPjxkaXY+PHNwYW4gY2xhc3NOYW1lPVwidGlueS1sYWJlbFwiPlRIRSBFVklERU5DRSBST09NPC9zcGFuPjxoMj5Db2xsZWN0ZWQgZXZpZGVuY2UgPHNwYW4+e3Nob3duLmxlbmd0aC50b1N0cmluZygpLnBhZFN0YXJ0KDIsJzAnKX08L3NwYW4+PC9oMj48L2Rpdj48ZGl2IGNsYXNzTmFtZT1cInNlYXJjaC1ib3hcIj48R2x5cGg+4oyVPC9HbHlwaD48aW5wdXQgYXJpYS1sYWJlbD1cIlNlYXJjaCBldmlkZW5jZVwiIHBsYWNlaG9sZGVyPVwiU2VhcmNoIHRoZSBmaWxl4oCmXCIgdmFsdWU9e3NlYXJjaH0gb25DaGFuZ2U9e2U9PnNldFNlYXJjaChlLnRhcmdldC52YWx1ZSl9Lz48L2Rpdj48L2Rpdj48ZGl2IGNsYXNzTmFtZT1cImZpbHRlcnNcIj57Y2F0cy5tYXAoYz0+PGJ1dHRvbiBvbkNsaWNrPXsoKT0+c2V0RmlsdGVyKGMpfSBjbGFzc05hbWU9e2ZpbHRlcj09PWM/J2FjdGl2ZSc6Jyd9IGtleT17Y30+e2M9PT0nQWxsJz8nQWxsIGV2aWRlbmNlJzpjfTwvYnV0dG9uPil9PC9kaXY+PGRpdiBjbGFzc05hbWU9XCJldmlkZW5jZS1saXN0XCI+e3Nob3duLm1hcCgoZSxpKT0+PGJ1dHRvbiBjbGFzc05hbWU9e2BldmlkZW5jZS1jYXJkICR7c2VsZWN0ZWQ/LmlkPT09ZS5pZD8nY2hvc2VuJzonJ31gfSBrZXk9e2UuaWR9IG9uQ2xpY2s9eygpPT5vcGVuRXZpZGVuY2UoZSl9PjxkaXYgY2xhc3NOYW1lPXtgZXZpZGVuY2UtY292ZXIgY292ZXItJHtlLmNhdGVnb3J5fWB9PjxzcGFuPntlLmNhdGVnb3J5PT09J2NjdHYnPyfil4knOmUuY2F0ZWdvcnk9PT0nY29udmVyc2F0aW9uJz8n4pakJzplLmNhdGVnb3J5PT09J3Bob3RvZ3JhcGgnPyfilqcnOmUuY2F0ZWdvcnk9PT0nd2l0bmVzcyc/J+Kdnic6J+KWpid9PC9zcGFuPjxzbWFsbD5FWEhJQklUIHtTdHJpbmcoaSsxKS5wYWRTdGFydCgyLCcwJyl9PC9zbWFsbD48Yj57ZS5jYXRlZ29yeS50b1VwcGVyQ2FzZSgpfTwvYj48L2Rpdj48ZGl2IGNsYXNzTmFtZT1cImV2aWRlbmNlLWNhcmQtaW5mb1wiPjxzcGFuIGNsYXNzTmFtZT1cInRpbnktbGFiZWxcIj57ZS5zb3VyY2V9IHtlLnRpbWVzdGFtcCYmYMK3ICR7ZS50aW1lc3RhbXB9YH08L3NwYW4+PGgzPntlLnRpdGxlfTwvaDM+PHA+e2UuZGVzY3JpcHRpb259PC9wPjxkaXYgY2xhc3NOYW1lPVwiY2FyZC1ib3R0b21cIj48c3Bhbj57KGludj8ucmV2aWV3ZWRFdmlkZW5jZUlkc3x8W10pLmluY2x1ZGVzKGUuaWQpPyfinJMgUkVWSUVXRUQnOidPUEVOIEVWSURFTkNFJ30g4oaXPC9zcGFuPjxzcGFuPnsoZS5yZWxhdGVkU3VzcGVjdElkc3x8W10pLmxlbmd0aH0gbGlua2VkPC9zcGFuPjwvZGl2PjwvZGl2PjwvYnV0dG9uPil9PC9kaXY+eyFzaG93bi5sZW5ndGgmJjxkaXYgY2xhc3NOYW1lPVwiZW1wdHktaW5saW5lXCI+Tm8gZXZpZGVuY2UgbWF0Y2hlcyB0aGF0IHNlYXJjaC48L2Rpdj59PC9zZWN0aW9uPjxhc2lkZSBjbGFzc05hbWU9e2Bub3RlYm9vayAke3RhYj09PSdOb3RlYm9vayc/J21vYmlsZS1zaG93JzonJ31gfT48ZGl2IGNsYXNzTmFtZT1cIm5vdGVib29rLWhlYWRcIj48c3BhbiBjbGFzc05hbWU9XCJ0aW55LWxhYmVsXCI+REVURUNUSVZFJ1MgTk9URUJPT0s8L3NwYW4+PHNwYW4+4pyzPC9zcGFuPjwvZGl2PjxsYWJlbCBodG1sRm9yPVwibm90ZXNcIj5ZT1VSIFBSSVZBVEUgTk9URVM8L2xhYmVsPjx0ZXh0YXJlYSBpZD1cIm5vdGVzXCIgcGxhY2Vob2xkZXI9XCJBIGRldGFpbCB0byByZXZpc2l04oCmXCIgZGVmYXVsdFZhbHVlPXtpbnY/Lm5vdGVzfHwnJ30gb25CbHVyPXtlPT5zYXZlTm90ZXMoZS50YXJnZXQudmFsdWUpfS8+PGRpdiBjbGFzc05hbWU9XCJzYXZlLXN0YXRlXCI+e3NhdmluZz8nU2F2aW5nIG5vdGVz4oCmJzonQXV0b3NhdmVzIHdoZW4geW91IGxlYXZlIHRoZSBmaWVsZCd9PC9kaXY+PGRpdiBjbGFzc05hbWU9XCJyZXZpZXdlZC1ib3hcIj48c3BhbiBjbGFzc05hbWU9XCJ0aW55LWxhYmVsXCI+UkVWSUVXRUQ8L3NwYW4+PGI+eyhpbnY/LnJldmlld2VkRXZpZGVuY2VJZHN8fFtdKS5sZW5ndGh9PHNtYWxsPiAvIHtkYXRhLmV2aWRlbmNlLmxlbmd0aH08L3NtYWxsPjwvYj48ZGl2IGNsYXNzTmFtZT1cInByb2dyZXNzLWxpbmVcIj48aSBzdHlsZT17e3dpZHRoOmAkeyhpbnY/LnJldmlld2VkRXZpZGVuY2VJZHN8fFtdKS5sZW5ndGgvZGF0YS5ldmlkZW5jZS5sZW5ndGgqMTAwfSVgfX0vPjwvZGl2PjwvZGl2PjxidXR0b24gY2xhc3NOYW1lPVwiYnV0dG9uIHByaW1hcnkgd2lkZVwiIG9uQ2xpY2s9eygpPT5zZXRBY2N1c2UodHJ1ZSl9Pk5hbWUgeW91ciBzdXNwZWN0IDxzcGFuPuKGlzwvc3Bhbj48L2J1dHRvbj48cCBjbGFzc05hbWU9XCJub3RlYm9vay1oaW50XCI+T25lIGZpbmFsIGFjY3VzYXRpb24uIE1ha2UgaXQgY291bnQuPC9wPjwvYXNpZGU+PC9kaXY+PC9tYWluPntzZWxlY3RlZCYmZGV0YWlsJiY8ZGl2IGNsYXNzTmFtZT1cIm1vZGFsLWJhY2tkcm9wXCIgb25DbGljaz17KCk9PntzZXRTZWxlY3RlZChudWxsKTtzZXREZXRhaWwobnVsbCl9fT48c2VjdGlvbiBjbGFzc05hbWU9XCJldmlkZW5jZS1tb2RhbFwiIG9uQ2xpY2s9e2U9PmUuc3RvcFByb3BhZ2F0aW9uKCl9PjxidXR0b24gY2xhc3NOYW1lPVwibW9kYWwtY2xvc2VcIiBvbkNsaWNrPXsoKT0+e3NldFNlbGVjdGVkKG51bGwpO3NldERldGFpbChudWxsKX19PsOXPC9idXR0b24+PHNwYW4gY2xhc3NOYW1lPVwidGlueS1sYWJlbFwiPkVWSURFTkNFIERFVEFJTCDCtyB7ZGV0YWlsLmNhdGVnb3J5LnRvVXBwZXJDYXNlKCl9PC9zcGFuPjxoMj57ZGV0YWlsLnRpdGxlfTwvaDI+PHAgY2xhc3NOYW1lPVwibW9kYWwtZGVzY1wiPntkZXRhaWwuZGVzY3JpcHRpb259PC9wPjxkaXYgY2xhc3NOYW1lPVwiZGV0YWlsLW1ldGFcIj48c3Bhbj5PUklHSU48c3Ryb25nPntkZXRhaWwuc291cmNlfTwvc3Ryb25nPjwvc3Bhbj48c3Bhbj5USU1FPHN0cm9uZz57ZGV0YWlsLnRpbWVzdGFtcHx8J05vdCByZWNvcmRlZCd9PC9zdHJvbmc+PC9zcGFuPjwvZGl2PjxkaXYgY2xhc3NOYW1lPXtgZGV0YWlsLWFydCBjb3Zlci0ke2RldGFpbC5jYXRlZ29yeX1gfT57ZGV0YWlsLmNhdGVnb3J5PT09J2NvbnZlcnNhdGlvbic/PGRpdiBjbGFzc05hbWU9XCJjaGF0LXByZXZpZXdcIj48c3Bhbj5BUkNISVZFRCBNRVNTQUdFUzwvc3Bhbj48cD5JbmNvbWluZyDCtyAxMTowOCBQTTxici8+PGI+e2RldGFpbC5jb250ZW50fTwvYj48L3A+PC9kaXY+OmRldGFpbC5jYXRlZ29yeT09PSdjY3R2Jz88ZGl2IGNsYXNzTmFtZT1cImNjdHYtcHJldmlld1wiPjxzcGFuPkNBTSAwMyAvIEZSQU1FIENBUFRVUkU8L3NwYW4+PGI+4peJICZuYnNwOyB7ZGV0YWlsLnRpbWVzdGFtcHx8JzIzOjQxOjA4J308L2I+PHNtYWxsPlNUSUxMIEZSQU1FIMK3IE5PVCBWSURFTzwvc21hbGw+PC9kaXY+OjxwPntkZXRhaWwuY29udGVudH08L3A+fTwvZGl2PjxkaXYgY2xhc3NOYW1lPVwib2JzZXJ2YXRpb25cIj48c3BhbiBjbGFzc05hbWU9XCJ0aW55LWxhYmVsXCI+RVhISUJJVCBOT1RFUzwvc3Bhbj48cD57ZGV0YWlsLmNvbnRlbnR9PC9wPntkZXRhaWwub2JzZXJ2YXRpb25zPy5tYXAoeD0+PHAga2V5PXt4fT7igKIge3h9PC9wPil9PC9kaXY+PGJ1dHRvbiBjbGFzc05hbWU9XCJidXR0b24gb3V0bGluZVwiIG9uQ2xpY2s9eygpPT57c2V0U2VsZWN0ZWQobnVsbCk7c2V0RGV0YWlsKG51bGwpfX0+4oaQIEJhY2sgdG8gZXZpZGVuY2U8L2J1dHRvbj48L3NlY3Rpb24+PC9kaXY+fXthY2N1c2UmJjxkaXYgY2xhc3NOYW1lPVwibW9kYWwtYmFja2Ryb3BcIj48c2VjdGlvbiBjbGFzc05hbWU9XCJhY2N1c2UtbW9kYWxcIj48YnV0dG9uIGNsYXNzTmFtZT1cIm1vZGFsLWNsb3NlXCIgb25DbGljaz17KCk9PnNldEFjY3VzZShmYWxzZSl9PsOXPC9idXR0b24+PHNwYW4gY2xhc3NOYW1lPVwidGlueS1sYWJlbFwiPlRIRSBGSU5BTCBDQUxMPC9zcGFuPjxoMj5XaG8gZGlkIGl0PzwvaDI+PHA+Q2hvb3NlIGNhcmVmdWxseS4gWW91IGNhbiBvbmx5IG1ha2Ugb25lIGZpbmFsIGFjY3VzYXRpb24uPC9wPjxkaXYgY2xhc3NOYW1lPVwic3VzcGVjdC1vcHRpb25zXCI+e2RhdGEuc3VzcGVjdHMubWFwKHM9PjxsYWJlbCBrZXk9e3MuaWR9IGNsYXNzTmFtZT17c2VsZWN0ZWQ/LnN1c3BlY3RJZD09PXMuaWQ/J3NlbGVjdGVkJzonJ30+PGlucHV0IHR5cGU9XCJyYWRpb1wiIG5hbWU9XCJjdWxwcml0XCIgdmFsdWU9e3MuaWR9IG9uQ2hhbmdlPXsoKT0+c2V0U2VsZWN0ZWQoe3N1c3BlY3RJZDpzLmlkLG5hbWU6cy5uYW1lfSl9Lz48c3Bhbj57cy5uYW1lfTwvc3Bhbj48c21hbGw+e3Mucm9sZX08L3NtYWxsPjwvbGFiZWw+KX08L2Rpdj48YnV0dG9uIGNsYXNzTmFtZT1cImJ1dHRvbiBwcmltYXJ5IHdpZGVcIiBkaXNhYmxlZD17IXNlbGVjdGVkPy5zdXNwZWN0SWR9IG9uQ2xpY2s9eygpPT5uYXYoYC9jYXNlLyR7aWR9L2NvbmZpcm0vJHtzZWxlY3RlZC5zdXNwZWN0SWR9YCx7c3RhdGU6e25hbWU6c2VsZWN0ZWQubmFtZX19KX0+UmV2aWV3IGFjY3VzYXRpb24gPHNwYW4+4oaXPC9zcGFuPjwvYnV0dG9uPjxidXR0b24gY2xhc3NOYW1lPVwidGV4dC1idXR0b25cIiBvbkNsaWNrPXsoKT0+c2V0QWNjdXNlKGZhbHNlKX0+S2VlcCBpbnZlc3RpZ2F0aW5nPC9idXR0b24+PC9zZWN0aW9uPjwvZGl2Pn08L1NoZWxsPn1cbmZ1bmN0aW9uIENvbmZpcm0oKXtjb25zdHtpZCxzdXNwZWN0SWR9PXVzZVBhcmFtcygpO2NvbnN0IG5hdj11c2VOYXZpZ2F0ZSgpLGxvY2F0aW9uPXVzZUxvY2F0aW9uKCk7Y29uc3RbbmFtZSxzZXROYW1lXT11c2VTdGF0ZShsb2NhdGlvbi5zdGF0ZT8ubmFtZXx8JycpO2NvbnN0W2J1c3ksc2V0QnVzeV09dXNlU3RhdGUoZmFsc2UpLFtlcnJvcixzZXRFcnJvcl09dXNlU3RhdGUoJycpO3VzZUVmZmVjdCgoKT0+e2lmKCFuYW1lKWFwaShgL215c3Rlcmllcy8ke2lkfWApLnRoZW4oZD0+c2V0TmFtZShkLmNhc2Uuc3VzcGVjdHMuZmluZChzPT5zLmlkPT09c3VzcGVjdElkKT8ubmFtZXx8J3lvdXIgc3VzcGVjdCcpKS5jYXRjaChlPT5zZXRFcnJvcihlLm1lc3NhZ2UpKX0sW2lkLHN1c3BlY3RJZCxuYW1lXSk7YXN5bmMgZnVuY3Rpb24gc3VibWl0KCl7c2V0QnVzeSh0cnVlKTt0cnl7YXdhaXQgYXBpKGAvbXlzdGVyaWVzLyR7aWR9L2FjY3VzYXRpb25gLHttZXRob2Q6J1BPU1QnLGJvZHk6SlNPTi5zdHJpbmdpZnkoe3N1c3BlY3RJZH0pfSk7bmF2KGAvY2FzZS8ke2lkfS9yZXN1bHRzYCl9Y2F0Y2goZSl7c2V0RXJyb3IoZS5tZXNzYWdlKTtzZXRCdXN5KGZhbHNlKX19cmV0dXJuIDxTaGVsbD48bWFpbiBjbGFzc05hbWU9XCJjb25maXJtLXBhZ2VcIj48TGluayBjbGFzc05hbWU9XCJiYWNrLWxpbmtcIiB0bz17YC9jYXNlLyR7aWR9YH0+4oaQIEJhY2sgdG8gdGhlIGNhc2U8L0xpbms+PGRpdiBjbGFzc05hbWU9XCJjb25maXJtLWNhcmRcIj48c3BhbiBjbGFzc05hbWU9XCJjb25maXJtLXNlYWxcIj7il4g8L3NwYW4+PGRpdiBjbGFzc05hbWU9XCJleWVicm93XCI+PGkvPiBGSU5BTCBBQ0NVU0FUSU9OPC9kaXY+PGgxPllvdeKAmXJlIG5hbWluZzxici8+PGVtPntuYW1lfHwneW91ciBzdXNwZWN0J30uPC9lbT48L2gxPjxwPlRoaXMgaXMgeW91ciBvbmUgZmluYWwgYWNjdXNhdGlvbi4gT25jZSBzdWJtaXR0ZWQsIHRoZSBjYXNlIHdpbGwgYmUgY2xvc2VkIGFuZCB0aGUgdHJ1dGggcmV2ZWFsZWQuPC9wPntlcnJvciYmPGRpdiBjbGFzc05hbWU9XCJlcnJvci1ib3hcIj57ZXJyb3J9PC9kaXY+fTxidXR0b24gY2xhc3NOYW1lPVwiYnV0dG9uIHByaW1hcnkgd2lkZVwiIGRpc2FibGVkPXtidXN5fHwhbmFtZX0gb25DbGljaz17c3VibWl0fT57YnVzeT8nU3VibWl0dGluZ+KApic6J1N1Ym1pdCBmaW5hbCBhY2N1c2F0aW9uJ30gPHNwYW4+4oaXPC9zcGFuPjwvYnV0dG9uPjxMaW5rIGNsYXNzTmFtZT1cInRleHQtYnV0dG9uXCIgdG89e2AvY2FzZS8ke2lkfWB9PkkgbmVlZCBhbm90aGVyIGxvb2s8L0xpbms+PC9kaXY+PC9tYWluPjwvU2hlbGw+fVxuZnVuY3Rpb24gUmVzdWx0cygpe2NvbnN0e2lkfT11c2VQYXJhbXMoKSxbcmVzdWx0LHNldFJlc3VsdF09dXNlU3RhdGUobnVsbCksW2Vycm9yLHNldEVycm9yXT11c2VTdGF0ZSgnJyk7dXNlRWZmZWN0KCgpPT57YXBpKGAvbXlzdGVyaWVzLyR7aWR9L3Jlc3VsdHNgKS50aGVuKHNldFJlc3VsdCkuY2F0Y2goZT0+c2V0RXJyb3IoZS5tZXNzYWdlKSl9LFtpZF0pO3JldHVybiA8U2hlbGw+PG1haW4gY2xhc3NOYW1lPVwicmVzdWx0cy1wYWdlXCI+e2Vycm9yPzxkaXYgY2xhc3NOYW1lPVwiZW1wdHktc3RhdGVcIj48ZGl2IGNsYXNzTmFtZT1cImVycm9yLWJveFwiPntlcnJvcn08L2Rpdj48TGluayB0bz17YC9jYXNlLyR7aWR9YH0gY2xhc3NOYW1lPVwiYnV0dG9uIGdob3N0XCI+4oaQIFJldHVybiB0byB0aGUgaW52ZXN0aWdhdGlvbjwvTGluaz48L2Rpdj46IXJlc3VsdD88ZGl2IGNsYXNzTmFtZT1cImxvYWRpbmctcGFnZVwiPjxzcGFuIGNsYXNzTmFtZT1cInNwaW5uZXJcIi8+IFVuc2VhbGluZyB0aGUgY2FzZeKApjwvZGl2Pjo8PjxkaXYgY2xhc3NOYW1lPVwicmVzdWx0LXN0YW1wXCI+Q0FTRSBDTE9TRUQgwrcgU09MVVRJT04gUkVWRUFMRUQ8L2Rpdj48ZGl2IGNsYXNzTmFtZT17YHJlc3VsdC1oZXJvICR7cmVzdWx0LmNvcnJlY3Q/J2NvcnJlY3QnOidpbmNvcnJlY3QnfWB9PjxzcGFuPntyZXN1bHQuY29ycmVjdD8n4pyTJzonw5cnfTwvc3Bhbj48ZGl2IGNsYXNzTmFtZT1cImV5ZWJyb3dcIj48aS8+IHtyZXN1bHQuY29ycmVjdD8nQSBTSEFSUCBFWUUnOidUSEUgRVZJREVOQ0UgTEVEIEVMU0VXSEVSRSd9PC9kaXY+PGgxPntyZXN1bHQuY29ycmVjdD8nWW91IHNvbHZlZCBpdC4nOidOb3QgcXVpdGUuJ308L2gxPjxwPllvdSBhY2N1c2VkIDxzdHJvbmc+e3Jlc3VsdC5zdWJtaXR0ZWRTdXNwZWN0fTwvc3Ryb25nPi4gVGhlIGN1bHByaXQgd2FzIDxzdHJvbmc+e3Jlc3VsdC5jdWxwcml0fTwvc3Ryb25nPi48L3A+PC9kaXY+PGRpdiBjbGFzc05hbWU9XCJzb2x1dGlvbi1wYW5lbFwiPjxkaXY+PHNwYW4gY2xhc3NOYW1lPVwidGlueS1sYWJlbFwiPlRIRSBNT1RJVkU8L3NwYW4+PHA+e3Jlc3VsdC5zb2x1dGlvbi5tb3RpdmV9PC9wPjxzcGFuIGNsYXNzTmFtZT1cInRpbnktbGFiZWxcIj5IT1cgVEhFIENBU0UgQlJFQUtTPC9zcGFuPjxwPntyZXN1bHQuc29sdXRpb24uZXhwbGFuYXRpb259PC9wPjwvZGl2Pjxhc2lkZT48c3BhbiBjbGFzc05hbWU9XCJ0aW55LWxhYmVsXCI+VEhFIFJFQVNPTklORzwvc3Bhbj57cmVzdWx0LnNvbHV0aW9uLnJlYXNvbmluZy5tYXAoKHgsaSk9PjxwIGtleT17eH0+PGI+MHtpKzF9PC9iPnt4fTwvcD4pfTwvYXNpZGU+PC9kaXY+PGRpdiBjbGFzc05hbWU9XCJyZXN1bHQtYWN0aW9uc1wiPjxMaW5rIHRvPXtgL2Nhc2UvJHtpZH1gfSBjbGFzc05hbWU9XCJidXR0b24gb3V0bGluZVwiPlJldmlldyB0aGUgZXZpZGVuY2U8L0xpbms+PExpbmsgdG89XCIvY2FzZXNcIiBjbGFzc05hbWU9XCJidXR0b24gZ2hvc3RcIj5DYXNlIGZpbGVzPC9MaW5rPjxMaW5rIHRvPVwiL2NyZWF0ZVwiIGNsYXNzTmFtZT1cImJ1dHRvbiBwcmltYXJ5XCI+Q3JlYXRlIGFub3RoZXIgY2FzZSDihpc8L0xpbms+PC9kaXY+PC8+fTwvbWFpbj48L1NoZWxsPn1cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEFwcCgpe3JldHVybiA8Um91dGVzPjxSb3V0ZSBwYXRoPVwiL1wiIGVsZW1lbnQ9ezxMYW5kaW5nLz59Lz48Um91dGUgcGF0aD1cIi9jcmVhdGVcIiBlbGVtZW50PXs8Q3JlYXRlLz59Lz48Um91dGUgcGF0aD1cIi9jYXNlc1wiIGVsZW1lbnQ9ezxDYXNlcy8+fS8+PFJvdXRlIHBhdGg9XCIvY2FzZS86aWRcIiBlbGVtZW50PXs8Q2FzZVJvb20vPn0vPjxSb3V0ZSBwYXRoPVwiL2Nhc2UvOmlkL2NvbmZpcm0vOnN1c3BlY3RJZFwiIGVsZW1lbnQ9ezxDb25maXJtLz59Lz48Um91dGUgcGF0aD1cIi9jYXNlLzppZC9yZXN1bHRzXCIgZWxlbWVudD17PFJlc3VsdHMvPn0vPjxSb3V0ZSBwYXRoPVwiKlwiIGVsZW1lbnQ9ezxMYW5kaW5nLz59Lz48L1JvdXRlcz59XG4iXSwiZmlsZSI6IkM6L1VzZXJzL0hQL09uZURyaXZlL+aWh+ahoy9Qcm9qZWN0cy9BSV9NeXN0ZXJ5X1Jvb20vY2xpZW50L3NyYy9zY3JlZW5zL0FwcC5qc3gifQ==
