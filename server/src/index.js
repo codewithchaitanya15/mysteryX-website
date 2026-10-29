@@ -9,7 +9,7 @@ import { api } from './routes/api.js';
 
 const app=express();
 app.disable('x-powered-by');
-app.use(cors({origin:env.CLIENT_URL,credentials:true}));
+app.use(cors({origin:env.CLIENT_URL,credentials:true,allowedHeaders:['Content-Type','X-Mystery-Session'],exposedHeaders:['X-Mystery-Session']}));
 app.use(express.json({limit:'32kb'}));
 app.use(cookieParser());
 app.use(sessionMiddleware);
