@@ -1,4 +1,12 @@
 const fail = (message) => { const e = new Error(`Generated case failed validation: ${message}`); e.status = 502; throw e; };
+function normalizeCertainty(value) {
+  if (typeof value !== 'string') return null;
+  const certainty = value.trim().toLowerCase().replace(/[\s_-]+/g, ' ');
+  if (['confirmed', 'certain', 'verified', 'corroborated', 'established', 'high', 'high confidence'].includes(certainty)) return 'confirmed';
+  if (['disputed', 'uncertain', 'unconfirmed', 'unverified', 'contested', 'alleged', 'possible', 'speculative', 'medium', 'low', 'low confidence'].includes(certainty)) return 'disputed';
+  return null;
+}
+
 export function validateMystery(data, { difficulty, evidenceCount }) {
   const expected = difficulty === 'Easy' ? 3 : difficulty === 'Medium' ? 4 : 5;
   if (!data?.title || !data.summary || !data.solution?.explanation) fail('missing required case fields');
@@ -15,7 +23,8 @@ export function validateMystery(data, { difficulty, evidenceCount }) {
   for (const event of data.timeline ?? []) {
     if (!evidence.has(event.evidenceId)) fail('timeline references unknown evidence');
     if (event.suspectIds?.some(id => !suspects.has(id))) fail('timeline references unknown suspect');
-    if (!['confirmed','disputed'].includes(event.certainty)) fail('invalid timeline certainty');
+    event.certainty = normalizeCertainty(event.certainty);
+    if (!event.certainty) fail('invalid timeline certainty');
   }
   const dated = data.timeline.filter(x => Number.isFinite(Date.parse(x.timestamp)));
   if (dated.length === data.timeline.length && dated.some((x, i) => i > 0 && Date.parse(x.timestamp) < Date.parse(dated[i - 1].timestamp))) fail('timeline is not chronological');
