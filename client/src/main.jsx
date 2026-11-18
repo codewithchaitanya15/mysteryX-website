@@ -3,7 +3,5 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './screens/App.jsx';
 import './styles.css';
-import './professional.css';
-import './dark-theme.css';
 
 createRoot(document.getElementById('root')).render(<React.StrictMode><BrowserRouter><App/></BrowserRouter></React.StrictMode>);
